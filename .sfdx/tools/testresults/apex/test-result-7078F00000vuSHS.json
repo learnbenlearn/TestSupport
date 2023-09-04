@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Tue Jul 11 2023 11:07:55 AM",
+    "testExecutionTimeInMs": 18,
+    "testTotalTimeInMs": 18,
+    "commandTimeInMs": 153,
+    "hostname": "https://efficiency-site-398-dev-ed.scratch.my.salesforce.com",
+    "orgId": "00D8F000000PelnUAC",
+    "username": "test-7whi79oy7lzu@example.com",
+    "testRunId": "7078F00000vuSHS",
+    "userId": "0058F000004AWLDQA4",
+    "totalLines": 0,
+    "coveredLines": 0,
+    "testRunCoverage": "0%",
+    "orgWideCoverage": "0%"
+  },
+  "tests": [
+    {
+      "id": "07M8F000007Lc09UAC",
+      "queueItemId": "7098F000000pqdzQAA",
+      "stackTrace": "Class.TestThis.testThis: line 5, column 1",
+      "message": "System.StringException: Invalid id: 001000111222333444555",
+      "asyncApexJobId": "7078F00000vuSHSQA2",
+      "methodName": "testThis",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p8F00000CYHUjQAP",
+        "name": "TestThis",
+        "namespacePrefix": null,
+        "fullName": "TestThis"
+      },
+      "runTime": 18,
+      "testTimestamp": "2023-07-11T15:07:55.000+0000",
+      "fullName": "TestThis.testThis",
+      "diagnostic": {
+        "exceptionMessage": "System.StringException: Invalid id: 001000111222333444555",
+        "exceptionStackTrace": "Class.TestThis.testThis: line 5, column 1",
+        "className": "TestThis",
+        "compileProblem": "",
+        "lineNumber": 5,
+        "columnNumber": 1
+      }
+    }
+  ],
+  "codecoverage": []
+}

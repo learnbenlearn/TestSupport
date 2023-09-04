@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 1,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Sun Aug 06 2023 3:31:26 AM",
+    "testExecutionTimeInMs": 65,
+    "testTotalTimeInMs": 65,
+    "commandTimeInMs": 67,
+    "hostname": "https://laguna-sagittarius-4535-dev-ed.scratch.my.salesforce.com",
+    "orgId": "00DDS000001I5vM2AS",
+    "username": "test-qijypxlzxdop@example.com",
+    "testRunId": "707DS00002pr9Wq",
+    "userId": "005DS00000vZr1UYAS",
+    "totalLines": 0,
+    "coveredLines": 0,
+    "testRunCoverage": "0%",
+    "orgWideCoverage": "0%"
+  },
+  "tests": [
+    {
+      "id": "07MDS00000aWylq2AC",
+      "queueItemId": "709DS0000040N3WYAU",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "707DS00002pr9WqYAI",
+      "methodName": "testFieldSpecs",
+      "outcome": "Pass",
+      "apexLogId": "07LDS00000MGXLb2AP",
+      "apexClass": {
+        "id": "01pDS00000nKYXwYAO",
+        "name": "TestTime",
+        "namespacePrefix": null,
+        "fullName": "TestTime"
+      },
+      "runTime": 65,
+      "testTimestamp": "2023-08-06T07:31:26.000+0000",
+      "fullName": "TestTime.testFieldSpecs"
+    }
+  ],
+  "codecoverage": []
+}

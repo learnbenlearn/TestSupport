@@ -1,0 +1,22 @@
+{
+  "packageDirectories": [
+    {
+      "path": "src",
+      "package": "TestSupport",
+      "versionName": "ver 1.2",
+      "versionNumber": "1.2.0.NEXT",
+      "versionDescription": "Package containing Apex class for bulk generation of test data."
+    }
+  ],
+  "name": "TestSupport",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "57.0",
+  "packageAliases": {
+    "TestSupport": "0Ho8c000000Kz38CAC",
+    "TestSupport@0.1.0-1": "04t8c000000iBHNAA2",
+    "TestSupport@1.0.0-1": "04t8c000000iBHSAA2",
+    "TestSupport@1.1.0-1": "04t8c000000iBLpAAM",
+    "TestSupport@1.2.0-1": "04t8c000000iBUXAA2"
+  }
+}
