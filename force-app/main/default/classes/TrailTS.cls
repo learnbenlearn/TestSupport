@@ -73,7 +73,7 @@ public class TrailTS extends TestSupport.DataGeneration  {
 
         if(this.insertRecords) insert testTrails;
         this.records = new Map<Id, sObject>(testTrails);
-        return this.returnCreatedRecords ? testTrails : null;
+        return testTrails;
     }
 
     public TrailTS changePicklistField(Schema.DescribeFieldResult fieldToChange) {

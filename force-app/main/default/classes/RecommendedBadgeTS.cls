@@ -26,6 +26,6 @@ public class RecommendedBadgeTS extends TestSupport.DataGeneration  {
             Database.insert(testRecommendedBadges, dmlOptions);
         }
         this.records = new Map<Id, sObject>(testRecommendedBadges);
-        return this.returnCreatedRecords ? testRecommendedBadges : null;
+        return testRecommendedBadges;
     }
 }

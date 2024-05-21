@@ -15,6 +15,6 @@ public class TaskTS extends TestSupport.DataGeneration  {
 
         if(this.insertRecords) insert testTasks;
         this.records = new Map<Id, sObject>(testTasks);
-        return this.returnCreatedRecords ? testTasks : null;
+        return testTasks;
     }
 }

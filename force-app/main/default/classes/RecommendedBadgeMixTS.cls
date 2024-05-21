@@ -35,6 +35,6 @@ public class RecommendedBadgeMixTS extends TestSupport.DataGeneration  {
             Database.insert(testRecommendedBadgeMixes, dmlOptions);
         }
         this.records = new Map<Id, sObject>(testRecommendedBadgeMixes);
-        return this.returnCreatedRecords ? testRecommendedBadgeMixes : null;
+        return testRecommendedBadgeMixes;
     }
 }

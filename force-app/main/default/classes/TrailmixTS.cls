@@ -20,6 +20,6 @@ public class TrailmixTS extends TestSupport.DataGeneration  {
         
         if(this.insertRecords) insert testTrailmixes;
         this.records = new Map<Id, sObject>(testTrailmixes);
-        return this.returnCreatedRecords ? testTrailmixes : null;
+        return testTrailmixes;
     }
 }

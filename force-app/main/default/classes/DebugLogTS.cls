@@ -20,6 +20,6 @@ public class DebugLogTS extends TestSupport.DataGeneration  {
         
         if(this.insertRecords) insert testDebugLogs;
         this.records = new Map<Id, sObject>(testDebugLogs);
-        return this.returnCreatedRecords ? testDebugLogs : null;
+        return testDebugLogs;
     }
 }

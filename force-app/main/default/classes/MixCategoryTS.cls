@@ -20,6 +20,6 @@ public class MixCategoryTS extends TestSupport.DataGeneration  {
 
         if(this.insertRecords) insert testMixCategories;
         this.records = new Map<Id, sObject>(testMixCategories);
-        return this.returnCreatedRecords ? testMixCategories : null;
+        return testMixCategories;
     }
 }

@@ -25,6 +25,6 @@ public class RecommendedTrailTS extends TestSupport.DataGeneration  {
             Database.insert(testRecommendedTrails, dmlOptions);
         }
         this.records = new Map<Id, sObject>(testRecommendedTrails);
-        return this.returnCreatedRecords ? testRecommendedTrails : null;
+        return testRecommendedTrails;
     }
 }

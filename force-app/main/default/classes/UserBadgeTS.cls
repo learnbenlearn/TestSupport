@@ -20,6 +20,6 @@ public class UserBadgeTS extends TestSupport.DataGeneration  {
         
         if(this.insertRecords) insert testUserBadges;
         this.records = new Map<Id, sObject>(testUserBadges);
-        return this.returnCreatedRecords ? testUserBadges : null;
+        return testUserBadges;
     }
 }

@@ -111,7 +111,7 @@ public class BadgeTS extends TestSupport.DataGeneration  {
 
         if(this.insertRecords) insert testBadges;
         this.records = new Map<Id, sObject>(testBadges);
-        return this.returnCreatedRecords ? testBadges : null;
+        return testBadges;
     }
 
     public BadgeTS changePicklistField(Schema.DescribeFieldResult fieldToChange) {
