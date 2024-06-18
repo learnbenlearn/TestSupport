@@ -45,6 +45,7 @@ public class TestSupport {
     public abstract class DataGeneration {
         protected final String S_OBJECT_TYPE;
 
+        public Boolean generateMasterRecords{get; set;}
         public Boolean generateRecordIDs {get; set;}
         public Boolean useFieldDefaults {get; set;}
         public Integer numberToGenerate {get; set;}
@@ -57,7 +58,7 @@ public class TestSupport {
             }
         }
 
-        public Map<Schema.SObjectField, TestDataField> specsByField {
+        protected Map<Schema.SObjectField, TestDataField> specsByField {
             get {
                 if(this.specsByField == null) {
                     this.specsByField = new Map<Schema.SObjectField, TestDataField>();
@@ -71,15 +72,34 @@ public class TestSupport {
             get {
                 if(this.defaultSpecsByField == null) {
                     this.defaultSpecsByField = this.loadDefaultSpecsByField();
-                    if(this.generateRecordIDs && (this.S_OBJECT_TYPE.endsWith('__e') == false)) {
-                        Schema.SObjectField idSObjectField = Schema.describeSObjects(new List<String>{this.S_OBJECT_TYPE})[0].fields.getMap().get('Id');
-                        this.defaultSpecsByField.put(idSObjectField, new IdField(idSObjectField));
+                    if(this.generateMasterRecords && this.generateRecordIDs) {
+                        this.defaultSpecsByField.putAll(this.loadMasterDetailFields());
                     }
                 }
                 return this.defaultSpecsByField;
             }
-            protected set;
-        }     
+            set;
+        }
+
+        protected Schema.SObjectField idField {
+            get {
+                if(this.idField == null) {
+                    this.idField = Schema.describeSObjects(new List<String>{this.S_OBJECT_TYPE})[0].fields.getMap().get('Id'); 
+                }
+                return this.idField;
+            }
+            set;
+        }
+
+        protected IdField idFieldSpec {
+            get {
+                if(this.idFieldSpec == null && this.idField != null) {
+                    this.idFieldSpec = new IdField(this.idField);
+                }
+                return this.idFieldSpec;
+            }
+            set;
+        }
 
         public List<sObject> records {
             get {
@@ -102,10 +122,7 @@ public class TestSupport {
         }
     
         protected DataGeneration(Map<String, Object> options) {
-            this.generateRecordIDs = options.containsKey('generateRecordIDs') ? Boolean.valueOf(options.get('generateRecordIDs')) : true;
-            this.useFieldDefaults = options.containsKey('useFieldDefaults') ? Boolean.valueOf(options.get('useFieldDefaults')) : true;
-            this.numberToGenerate = options.containsKey('numberToGenerate') ? Integer.valueOf(options.get('numberToGenerate')) : 200;
-            this.generatorReturnValue = options.containsKey('generatorReturnValue') ? String.valueOf(options.get('generatorReturnValue')) : 'new';
+            this(options, new List<TestDataField>());
         }
 
         protected DataGeneration(Map<String, Object> options, List<TestDataField> fieldSpecs) {
@@ -113,29 +130,36 @@ public class TestSupport {
                 this.specsByField.put(fieldSpec.field, fieldSpec);
             }
 
-            this.generateRecordIDs = options.containsKey('generateRecordIDs') ? Boolean.valueOf(options.get('generateRecordIDs')) : false;
-            this.useFieldDefaults = options.containsKey('useFieldDefaults') ? Boolean.valueOf(options.get('useFieldDefaults')) : true;
-            this.numberToGenerate = options.containsKey('numberToGenerate') ? Integer.valueOf(options.get('numberToGenerate')) : 200;
-            this.generatorReturnValue = options.containsKey('generatorReturnValue') ? String.valueOf(options.get('generatorReturnValue')) : 'new';
+            this.generateMasterRecords = Boolean.valueOf(options.get('generateMasterRecords') ?? false);
+            this.generateRecordIDs = Boolean.valueOf(options.get('generateRecordIDs') ?? true);
+            this.useFieldDefaults = Boolean.valueOf(options.get('useFieldDefaults') ?? true);
+            this.numberToGenerate = Integer.valueOf(options.get('numberToGenerate') ?? 200);
+            this.generatorReturnValue = String.valueOf(options.get('generatorReturnValue') ?? 'new');
         }
 
         protected virtual Map<Schema.SObjectField, TestDataField> loadDefaultSpecsByField() {
             throw new TestSupport.TSException('Default field specs are not defined for this class.');
         }
 
-        public void setFieldSpec(TestDataField fieldSpec) {
-            this.specsByField.put(fieldSpec.field, fieldSpec);
+        protected virtual Map<Schema.SObjectField, RelationshipField> loadMasterDetailFields() {
+            throw new TestSupport.TSException('Master Detail field specs are not defined for this class.');
         }
 
-        public void setFieldSpecs(List<TestDataField> fieldSpecs) {
+        public DataGeneration setFieldSpec(TestDataField fieldSpec) {
+            this.specsByField.put(fieldSpec.field, fieldSpec);
+            return this;
+        }
+
+        public DataGeneration setFieldSpecs(List<TestDataField> fieldSpecs) {
             for(TestDataField fieldSpec : fieldSpecs) {
                 this.specsByField.put(fieldSpec.field, fieldSpec);
             }
+            return this;
         }
 
-        public void overwriteFieldSpecs(List<TestDataField> fieldSpecs) {
+        public DataGeneration overwriteFieldSpecs(List<TestDataField> fieldSpecs) {
             this.specsByField.clear();
-            this.setFieldSpecs(fieldSpecs);
+            return this.setFieldSpecs(fieldSpecs);
         }
 
         public virtual List<sObject> generate() {
@@ -153,7 +177,7 @@ public class TestSupport {
 
             if(this.useFieldDefaults) {
                 for(TestDataField fieldSpec : this.defaultSpecsByField.values()) {
-                    if(specsByField.containsKey(fieldSpec.field) == false) {
+                    if(this.specsByField.containsKey(fieldSpec.field) == false) {
                         if(fieldSpec.isDynamic) {
                             dynamicFields.add(fieldSpec);
                         } else {
@@ -161,6 +185,10 @@ public class TestSupport {
                         }
                     }
                 }
+            }
+
+            if(this.generateRecordIDs && (this.idField != null) && (this.specsByField.containsKey(this.idField) == false)) {
+                dynamicFields.add(this.idFieldSpec);
             }
 
             for(Integer i = 0; i < this.numberToGenerate; i++) {
@@ -189,8 +217,8 @@ public class TestSupport {
             return this;
         }
 
-        public DataGeneration clearField(Schema.DescribeFieldResult fieldToClear) {
-            String fieldName = fieldToClear.getName();
+        public DataGeneration clearField(Schema.SObjectField fieldToClear) {
+            String fieldName = fieldToClear.getDescribe().getName();
             for(sObject record : this.modifiedRecords) {
                 record.put(fieldName, null);
             }

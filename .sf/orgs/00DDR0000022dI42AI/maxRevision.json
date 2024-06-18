@@ -1,0 +1,1151 @@
+{
+    "serverMaxRevisionCounter": 830,
+    "sourceMembers": {
+        "Profile__Admin": {
+            "serverRevisionCounter": 67,
+            "lastRetrievedFromServer": null,
+            "memberType": "Profile",
+            "isNameObsolete": false
+        },
+        "ApexClass__RelationshipField": {
+            "serverRevisionCounter": 829,
+            "lastRetrievedFromServer": 829,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TestSupport": {
+            "serverRevisionCounter": 830,
+            "lastRetrievedFromServer": 830,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.ADM_Mix_Categories": {
+            "serverRevisionCounter": 643,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.All": {
+            "serverRevisionCounter": 644,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.Ben_s_Mix_Categories": {
+            "serverRevisionCounter": 645,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.Mix_Categories_without_Badges_or_Trails": {
+            "serverRevisionCounter": 646,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.Orphaned_Exam_Categories": {
+            "serverRevisionCounter": 647,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.Orphaned_Mix_Categories": {
+            "serverRevisionCounter": 648,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.PDI_Mix_Categories": {
+            "serverRevisionCounter": 649,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Mix_Category__c.Recommended_Badges_Categories": {
+            "serverRevisionCounter": 650,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "ListView__Recommended_Badge_Mix__c.All": {
+            "serverRevisionCounter": 651,
+            "lastRetrievedFromServer": null,
+            "memberType": "ListView",
+            "isNameObsolete": false
+        },
+        "CustomField__Mix_Category__c.Recommended_Badge_Mix__c": {
+            "serverRevisionCounter": 494,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Mix_Category__c": {
+            "serverRevisionCounter": 496,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Mix_Category__c": {
+            "serverRevisionCounter": 498,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__DefaultObjectSelector__mdt.DefaultSelector__c": {
+            "serverRevisionCounter": 500,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__DefaultObjectSelector__mdt.Suffix__c": {
+            "serverRevisionCounter": 501,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__DefaultServiceImplementation__mdt.DefaultImplementation__c": {
+            "serverRevisionCounter": 502,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Mix_Category__c.Exam__c": {
+            "serverRevisionCounter": 503,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Mix_Category__c.Test_External_Id__c": {
+            "serverRevisionCounter": 504,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Mix_Category__c.Weight__c": {
+            "serverRevisionCounter": 505,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__NewRecommendedBadgeTrailEvent__e.RecordID__c": {
+            "serverRevisionCounter": 506,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge_Mix__c.Default_Badge_Mix__c": {
+            "serverRevisionCounter": 507,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge_Mix__c.ExamMix__c": {
+            "serverRevisionCounter": 508,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge_Mix__c.Last_Updated_Date__c": {
+            "serverRevisionCounter": 509,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge_Mix__c.OwnerID__c": {
+            "serverRevisionCounter": 510,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge_Mix__c.Private_Mix__c": {
+            "serverRevisionCounter": 511,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge_Mix__c.Test_External_Id__c": {
+            "serverRevisionCounter": 512,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.BadgeAPIName__c": {
+            "serverRevisionCounter": 513,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Badge_Mix_Key__c": {
+            "serverRevisionCounter": 515,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Badge__c": {
+            "serverRevisionCounter": 517,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Category_Rank__c": {
+            "serverRevisionCounter": 519,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.High_Priority__c": {
+            "serverRevisionCounter": 522,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Hours_Estimate__c": {
+            "serverRevisionCounter": 523,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Level__c": {
+            "serverRevisionCounter": 526,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Minutes_Estimate__c": {
+            "serverRevisionCounter": 527,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Saved_by_CMT__c": {
+            "serverRevisionCounter": 529,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Test_External_Id__c": {
+            "serverRevisionCounter": 530,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Type__c": {
+            "serverRevisionCounter": 533,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Level__c": {
+            "serverRevisionCounter": 539,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Test_External_Id__c": {
+            "serverRevisionCounter": 541,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.TrailAPIName__c": {
+            "serverRevisionCounter": 542,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Trail__c": {
+            "serverRevisionCounter": 544,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__TrailTrackerProviderMapping__mdt.ProviderField__c": {
+            "serverRevisionCounter": 547,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__TrailTrackerProviderMapping__mdt.ProviderObject__c": {
+            "serverRevisionCounter": 548,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__TrailTrackerProviderMapping__mdt.RecommendedBadgesObject__c": {
+            "serverRevisionCounter": 549,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Mix_Category__c.Number_of_Badges__c": {
+            "serverRevisionCounter": 550,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Mix_Category__c.Number_of_Trails__c": {
+            "serverRevisionCounter": 551,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__TrailTrackerProviderMapping__mdt.RecommendedBadgesField__c": {
+            "serverRevisionCounter": 552,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Badge_Icon__c": {
+            "serverRevisionCounter": 514,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Badge_Name__c": {
+            "serverRevisionCounter": 516,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Description__c": {
+            "serverRevisionCounter": 520,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.High_Priority_Id__c": {
+            "serverRevisionCounter": 521,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.HyperlinkedName__c": {
+            "serverRevisionCounter": 524,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Icon__c": {
+            "serverRevisionCounter": 525,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Products__c": {
+            "serverRevisionCounter": 528,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Time_Estimate_Minutes__c": {
+            "serverRevisionCounter": 531,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.Time_Estimate__c": {
+            "serverRevisionCounter": 532,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Badge__c.URL__c": {
+            "serverRevisionCounter": 534,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Badge_Icon__c": {
+            "serverRevisionCounter": 535,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Description__c": {
+            "serverRevisionCounter": 536,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.HyperlinkedName__c": {
+            "serverRevisionCounter": 537,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Icon__c": {
+            "serverRevisionCounter": 538,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Products__c": {
+            "serverRevisionCounter": 540,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.Trail_Name__c": {
+            "serverRevisionCounter": 543,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "CustomField__Recommended_Trail__c.URL__c": {
+            "serverRevisionCounter": 546,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "Layout__DefaultObjectSelector__mdt-SObjectSelector Layout": {
+            "serverRevisionCounter": 661,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__DefaultServiceImplementation__mdt-Service Layout": {
+            "serverRevisionCounter": 662,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__Mix_Category__c-Exam Category Layout": {
+            "serverRevisionCounter": 713,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__Recommended_Badge_Mix__c-Recommended Badge Mix Layout": {
+            "serverRevisionCounter": 665,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__Recommended_Badge__c-Recommended Badge Layout": {
+            "serverRevisionCounter": 666,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__Recommended_Trail__c-Recommended Trail Layout": {
+            "serverRevisionCounter": 667,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__TrailTrackerProviderMapping__mdt-Trail Tracker Provider Mapping Layout": {
+            "serverRevisionCounter": 668,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "Layout__Mix_Category__c-Mix Category Layout": {
+            "serverRevisionCounter": 738,
+            "lastRetrievedFromServer": null,
+            "memberType": "Layout",
+            "isNameObsolete": false
+        },
+        "RecordType__Mix_Category__c.Exam_Category": {
+            "serverRevisionCounter": 634,
+            "lastRetrievedFromServer": null,
+            "memberType": "RecordType",
+            "isNameObsolete": false
+        },
+        "RecordType__Mix_Category__c.Standard": {
+            "serverRevisionCounter": 635,
+            "lastRetrievedFromServer": null,
+            "memberType": "RecordType",
+            "isNameObsolete": false
+        },
+        "CustomObject__DefaultObjectSelector__mdt": {
+            "serverRevisionCounter": 626,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__DefaultServiceImplementation__mdt": {
+            "serverRevisionCounter": 627,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__Mix_Category__c": {
+            "serverRevisionCounter": 628,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__NewRecommendedBadgeTrailEvent__e": {
+            "serverRevisionCounter": 629,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__Recommended_Badge_Mix__c": {
+            "serverRevisionCounter": 630,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__Recommended_Badge__c": {
+            "serverRevisionCounter": 631,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__Recommended_Trail__c": {
+            "serverRevisionCounter": 632,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "CustomObject__TrailTrackerProviderMapping__mdt": {
+            "serverRevisionCounter": 633,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomObject",
+            "isNameObsolete": false
+        },
+        "ApexClass__Application": {
+            "serverRevisionCounter": 561,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ApplicationSelector": {
+            "serverRevisionCounter": 562,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__ApplicationTests": {
+            "serverRevisionCounter": 563,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__Badges": {
+            "serverRevisionCounter": 564,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__BadgesSelector": {
+            "serverRevisionCounter": 565,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__BadgesSelectorTests": {
+            "serverRevisionCounter": 566,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__CustomHttpCalloutMock": {
+            "serverRevisionCounter": 567,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DMLUtils": {
+            "serverRevisionCounter": 568,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DebugLogsSelector": {
+            "serverRevisionCounter": 569,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DebugLogsSelectorTests": {
+            "serverRevisionCounter": 570,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DefaultObjectSelectorsSelector": {
+            "serverRevisionCounter": 571,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DefaultObjectSelectorsSelectorTests": {
+            "serverRevisionCounter": 572,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DefaultServiceImplementationSelectorTest": {
+            "serverRevisionCounter": 573,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__DefaultServiceImplementationsSelector": {
+            "serverRevisionCounter": 574,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__MixCategoriesSelector": {
+            "serverRevisionCounter": 575,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__MixCategoriesSelectorTests": {
+            "serverRevisionCounter": 576,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__MixCategoryTS": {
+            "serverRevisionCounter": 577,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NewRecommendedBadgeTrailEventTS": {
+            "serverRevisionCounter": 578,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NewRecommendedBadgeTrailEventTgr_Tests": {
+            "serverRevisionCounter": 579,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__NewRecommendedBadgeTrailEventTrgrHandler": {
+            "serverRevisionCounter": 580,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__QueueableTrailTrackerProviderCallout": {
+            "serverRevisionCounter": 581,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeMixTS": {
+            "serverRevisionCounter": 582,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeMixTriggerHandler": {
+            "serverRevisionCounter": 583,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeMixTrigger_Tests": {
+            "serverRevisionCounter": 584,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeMixes": {
+            "serverRevisionCounter": 585,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeMixesSelector": {
+            "serverRevisionCounter": 586,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeMixesSelectorTests": {
+            "serverRevisionCounter": 587,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeTS": {
+            "serverRevisionCounter": 588,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeTrailTriggerHelper": {
+            "serverRevisionCounter": 589,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeTrailTriggerHelper_Tests": {
+            "serverRevisionCounter": 590,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeTriggerHandler": {
+            "serverRevisionCounter": 591,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgeTrigger_Tests": {
+            "serverRevisionCounter": 592,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadges": {
+            "serverRevisionCounter": 593,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgesSelector": {
+            "serverRevisionCounter": 594,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedBadgesSelectorTests": {
+            "serverRevisionCounter": 595,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedTrailTS": {
+            "serverRevisionCounter": 596,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedTrailTriggerHandler": {
+            "serverRevisionCounter": 597,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedTrailTrigger_Tests": {
+            "serverRevisionCounter": 824,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedTrails": {
+            "serverRevisionCounter": 599,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedTrailsSelector": {
+            "serverRevisionCounter": 600,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__RecommendedTrailsSelectorTests": {
+            "serverRevisionCounter": 601,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__SelectorTestErrorMessages": {
+            "serverRevisionCounter": 602,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TasksSelector": {
+            "serverRevisionCounter": 603,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TasksSelectorTests": {
+            "serverRevisionCounter": 604,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TestDataFactory": {
+            "serverRevisionCounter": 605,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailheadEntityFormController": {
+            "serverRevisionCounter": 606,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailmixesSelector": {
+            "serverRevisionCounter": 607,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailmixesSelectorTests": {
+            "serverRevisionCounter": 608,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__Trails": {
+            "serverRevisionCounter": 609,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailsSelector": {
+            "serverRevisionCounter": 610,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailsSelectorTests": {
+            "serverRevisionCounter": 611,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UserBadgesSelector": {
+            "serverRevisionCounter": 612,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__UserBadgesSelectorTests": {
+            "serverRevisionCounter": 613,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexTrigger__NewRecommendedBadgeTrailEventTrigger": {
+            "serverRevisionCounter": 614,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexTrigger",
+            "isNameObsolete": false
+        },
+        "ApexTrigger__RecommendedBadgeMixTrigger": {
+            "serverRevisionCounter": 615,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexTrigger",
+            "isNameObsolete": false
+        },
+        "ApexTrigger__RecommendedBadgeTrigger": {
+            "serverRevisionCounter": 616,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexTrigger",
+            "isNameObsolete": false
+        },
+        "ApexTrigger__RecommendedTrailTrigger": {
+            "serverRevisionCounter": 617,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexTrigger",
+            "isNameObsolete": false
+        },
+        "CustomTab__Mix_Category__c": {
+            "serverRevisionCounter": 673,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomTab",
+            "isNameObsolete": false
+        },
+        "CustomTab__Recommended_Badge_Mix__c": {
+            "serverRevisionCounter": 674,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomTab",
+            "isNameObsolete": false
+        },
+        "ValidationRule__DefaultObjectSelector__mdt.No_Whitespace_in_Default_Selector": {
+            "serverRevisionCounter": 640,
+            "lastRetrievedFromServer": null,
+            "memberType": "ValidationRule",
+            "isNameObsolete": false
+        },
+        "ValidationRule__DefaultServiceImplementation__mdt.No_Whitespace_in_Default_Implementation": {
+            "serverRevisionCounter": 641,
+            "lastRetrievedFromServer": null,
+            "memberType": "ValidationRule",
+            "isNameObsolete": false
+        },
+        "ValidationRule__TrailTrackerProviderMapping__mdt.No_Mismatched_Objects": {
+            "serverRevisionCounter": 642,
+            "lastRetrievedFromServer": null,
+            "memberType": "ValidationRule",
+            "isNameObsolete": false
+        },
+        "ApexTestSuite__Core": {
+            "serverRevisionCounter": 677,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexTestSuite",
+            "isNameObsolete": false
+        },
+        "ApexTestSuite__Triggers": {
+            "serverRevisionCounter": 678,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexTestSuite",
+            "isNameObsolete": false
+        },
+        "CompactLayout__Mix_Category__c.Mix_Category_Compact_Layout": {
+            "serverRevisionCounter": 636,
+            "lastRetrievedFromServer": null,
+            "memberType": "CompactLayout",
+            "isNameObsolete": false
+        },
+        "CompactLayout__Recommended_Badge_Mix__c.Recommended_Badge_Mix_Compact_Layout": {
+            "serverRevisionCounter": 637,
+            "lastRetrievedFromServer": null,
+            "memberType": "CompactLayout",
+            "isNameObsolete": false
+        },
+        "CompactLayout__Recommended_Badge__c.Recommended_Badge_Compact_Layout": {
+            "serverRevisionCounter": 638,
+            "lastRetrievedFromServer": null,
+            "memberType": "CompactLayout",
+            "isNameObsolete": false
+        },
+        "CompactLayout__Recommended_Trail__c.Recommended_Trail_Compact_Layout": {
+            "serverRevisionCounter": 639,
+            "lastRetrievedFromServer": null,
+            "memberType": "CompactLayout",
+            "isNameObsolete": false
+        },
+        "AuraDefinitionBundle__trailheadEntityNewEditOverride": {
+            "serverRevisionCounter": 623,
+            "lastRetrievedFromServer": null,
+            "memberType": "AuraDefinitionBundle",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__trailheadEntityNewEditOverride/trailheadEntityNewEditOverride.cmp": {
+            "serverRevisionCounter": 624,
+            "lastRetrievedFromServer": null,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "DuplicateRule__Recommended_Badge_Mix__c.Recommended_Badge_Mix_Duplicate_Rule": {
+            "serverRevisionCounter": 685,
+            "lastRetrievedFromServer": null,
+            "memberType": "DuplicateRule",
+            "isNameObsolete": false
+        },
+        "FieldSet__Mix_Category__c.PrivateMixView": {
+            "serverRevisionCounter": 652,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__Mix_Category__c.RecommendedBadgeMix": {
+            "serverRevisionCounter": 653,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__Recommended_Badge__c.PrivateMixView": {
+            "serverRevisionCounter": 654,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__Recommended_Badge__c.RecommendedBadgeMix": {
+            "serverRevisionCounter": 655,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__Recommended_Badge__c.Triggers": {
+            "serverRevisionCounter": 656,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__Recommended_Trail__c.RecommendedBadgeMix": {
+            "serverRevisionCounter": 657,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__Recommended_Trail__c.Triggers": {
+            "serverRevisionCounter": 658,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__trailheadapp__Badge__c.Triggers": {
+            "serverRevisionCounter": 659,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "FieldSet__trailheadapp__Trail__c.Triggers": {
+            "serverRevisionCounter": 660,
+            "lastRetrievedFromServer": null,
+            "memberType": "FieldSet",
+            "isNameObsolete": false
+        },
+        "MatchingRule__Recommended_Badge_Mix__c.Recommended_Badge_Mix_Matching_Rule": {
+            "serverRevisionCounter": 684,
+            "lastRetrievedFromServer": null,
+            "memberType": "MatchingRule",
+            "isNameObsolete": false
+        },
+        "FlexiPage__Mix_Category_Record_Page": {
+            "serverRevisionCounter": 820,
+            "lastRetrievedFromServer": null,
+            "memberType": "FlexiPage",
+            "isNameObsolete": false
+        },
+        "FlexiPage__Recommended_Badge_Mix_Record_Page": {
+            "serverRevisionCounter": 670,
+            "lastRetrievedFromServer": null,
+            "memberType": "FlexiPage",
+            "isNameObsolete": false
+        },
+        "FlexiPage__Recommended_Badge_Record_Page": {
+            "serverRevisionCounter": 671,
+            "lastRetrievedFromServer": null,
+            "memberType": "FlexiPage",
+            "isNameObsolete": false
+        },
+        "FlexiPage__Recommended_Trail_Record_Page": {
+            "serverRevisionCounter": 672,
+            "lastRetrievedFromServer": null,
+            "memberType": "FlexiPage",
+            "isNameObsolete": false
+        },
+        "GlobalValueSet__Level": {
+            "serverRevisionCounter": 625,
+            "lastRetrievedFromServer": null,
+            "memberType": "GlobalValueSet",
+            "isNameObsolete": false
+        },
+        "PermissionSet__Activities_Collaboration_Permissions": {
+            "serverRevisionCounter": 679,
+            "lastRetrievedFromServer": null,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        },
+        "PermissionSet__Core_Permissions": {
+            "serverRevisionCounter": 680,
+            "lastRetrievedFromServer": null,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        },
+        "PermissionSet__Data_Visualization_Permissions": {
+            "serverRevisionCounter": 681,
+            "lastRetrievedFromServer": null,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        },
+        "PermissionSet__Trail_Tracker_Integration": {
+            "serverRevisionCounter": 682,
+            "lastRetrievedFromServer": null,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        },
+        "PermissionSet__Triggers_Permissions": {
+            "serverRevisionCounter": 683,
+            "lastRetrievedFromServer": null,
+            "memberType": "PermissionSet",
+            "isNameObsolete": false
+        },
+        "LightningComponentBundle__trailheadEntityForm": {
+            "serverRevisionCounter": 618,
+            "lastRetrievedFromServer": null,
+            "memberType": "LightningComponentBundle",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__trailheadEntityForm/trailheadEntityForm.css": {
+            "serverRevisionCounter": 619,
+            "lastRetrievedFromServer": null,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__trailheadEntityForm/trailheadEntityForm.js": {
+            "serverRevisionCounter": 620,
+            "lastRetrievedFromServer": null,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__trailheadEntityForm/trailheadEntityForm.html": {
+            "serverRevisionCounter": 621,
+            "lastRetrievedFromServer": null,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__trailheadEntityForm/trailheadEntityForm.js-meta.xml": {
+            "serverRevisionCounter": 622,
+            "lastRetrievedFromServer": null,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "Flow__Recommended_Badge_Mix_Before_Insert_Update_Handler": {
+            "serverRevisionCounter": 675,
+            "lastRetrievedFromServer": null,
+            "memberType": "Flow",
+            "isNameObsolete": false
+        },
+        "Flow__Update_Recommended_Badge_Mix_Last_Updated_Date": {
+            "serverRevisionCounter": 676,
+            "lastRetrievedFromServer": null,
+            "memberType": "Flow",
+            "isNameObsolete": false
+        },
+        "Flow__Mix_Category_After_Insert_Update_Handler": {
+            "serverRevisionCounter": 558,
+            "lastRetrievedFromServer": null,
+            "memberType": "Flow",
+            "isNameObsolete": false
+        },
+        "Flow__Recommended_Badge_After_Insert_Update_Handler": {
+            "serverRevisionCounter": 559,
+            "lastRetrievedFromServer": null,
+            "memberType": "Flow",
+            "isNameObsolete": false
+        },
+        "Flow__Recommended_Trail_After_Insert_Update_Handler": {
+            "serverRevisionCounter": 560,
+            "lastRetrievedFromServer": null,
+            "memberType": "Flow",
+            "isNameObsolete": false
+        },
+        "PlatformEventSubscriberConfig__NewRecommendedBadgeTrailEventTriggerConfig": {
+            "serverRevisionCounter": 686,
+            "lastRetrievedFromServer": null,
+            "memberType": "PlatformEventSubscriberConfig",
+            "isNameObsolete": false
+        },
+        "CustomMetadata__TrailTrackerProviderMapping.RecommendedBadgeAPINameMapping": {
+            "serverRevisionCounter": 553,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        },
+        "CustomMetadata__TrailTrackerProviderMapping.RecommendedBadgeLevelMapping": {
+            "serverRevisionCounter": 554,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        },
+        "CustomMetadata__TrailTrackerProviderMapping.RecommendedBadgeTypeMapping": {
+            "serverRevisionCounter": 555,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        },
+        "CustomMetadata__TrailTrackerProviderMapping.RecommendedTrailAPINameMapping": {
+            "serverRevisionCounter": 556,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        },
+        "CustomMetadata__TrailTrackerProviderMapping.RecommendedTrailLevelMapping": {
+            "serverRevisionCounter": 557,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        }
+    }
+}

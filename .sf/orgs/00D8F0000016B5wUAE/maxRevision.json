@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 154,
+    "serverMaxRevisionCounter": 248,
     "sourceMembers": {
         "Profile__Admin": {
             "serverRevisionCounter": 18,
@@ -56,8 +56,8 @@
             "isNameObsolete": false
         },
         "ApexClass__TestSupport": {
-            "serverRevisionCounter": 154,
-            "lastRetrievedFromServer": 154,
+            "serverRevisionCounter": 248,
+            "lastRetrievedFromServer": 248,
             "memberType": "ApexClass",
             "isNameObsolete": false
         },
@@ -419,6 +419,24 @@
             "serverRevisionCounter": 91,
             "lastRetrievedFromServer": null,
             "memberType": "CustomMetadata",
+            "isNameObsolete": false
+        },
+        "ApexClass__BadgeTriggerHandler_Tests": {
+            "serverRevisionCounter": 192,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailTriggerHandler_Tests": {
+            "serverRevisionCounter": 193,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "ApexClass__TrailheadEntityUpdateEvtTgrHdlr_Tests": {
+            "serverRevisionCounter": 221,
+            "lastRetrievedFromServer": null,
+            "memberType": "ApexClass",
             "isNameObsolete": false
         }
     }

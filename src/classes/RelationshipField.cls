@@ -2,13 +2,13 @@
 public class RelationshipField extends TestSupport.TestDataField {
     private Integer counter;
     private Integer numParentRecords;
-    private List<Id> parentRecords;
+    private List<Id> parentRecordIds;
     
-    public RelationshipField(Schema.SObjectField field, List<Id> parentRecords) {
+    public RelationshipField(Schema.SObjectField field, Set<Id> parentRecordIds) {
         this.counter = 0;
         this.field = field;
-        this.numParentRecords = parentRecords.size();
-        this.parentRecords = parentRecords;
+        this.numParentRecords = parentRecordIds.size();
+        this.parentRecordIds = new List<Id>(parentRecordIds);
         this.isDynamic = true;
         this.fieldJSON = '"' + field.getDescribe().getName() + '": "{0}"';
     }
@@ -16,6 +16,6 @@ public class RelationshipField extends TestSupport.TestDataField {
     public override String getFieldJSON() {
         Integer temp = this.counter;
         this.counter += 1;
-        return this.fieldJSON.replace('{0}', this.parentRecords[Math.mod(temp, this.numParentRecords)]);
+        return this.fieldJSON.replace('{0}', this.parentRecordIds[Math.mod(temp, this.numParentRecords)]);
     }
 }

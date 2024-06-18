@@ -3,9 +3,9 @@
     {
       "path": "src",
       "package": "TestSupport",
-      "versionName": "ver 1.3",
-      "versionNumber": "1.3.0.NEXT",
-      "versionDescription": "Package containing Apex class for bulk generation of test data."
+      "versionName": "ver 1.8",
+      "versionNumber": "1.8.0.NEXT",
+      "versionDescription": "Package containing Apex classes for bulk generation of test data."
     }
   ],
   "name": "TestSupport",
@@ -18,6 +18,11 @@
     "TestSupport@1.0.0-1": "04t8c000000iBHSAA2",
     "TestSupport@1.1.0-1": "04t8c000000iBLpAAM",
     "TestSupport@1.2.0-1": "04t8c000000iBUXAA2",
-    "TestSupport@1.3.0-1": "04t8c000000vFxoAAE"
+    "TestSupport@1.3.0-1": "04t8c000000vFxoAAE",
+    "TestSupport@1.4.0-1": "04t8c000000vFxyAAE",
+    "TestSupport@1.5.0-1": "04t8c000000vFyXAAU",
+    "TestSupport@1.6.0-1": "04t8c000000vFycAAE",
+    "TestSupport@1.7.0-1": "04t8c000000vFyhAAE",
+    "TestSupport@1.8.0-1": "04t8c000000vG3cAAE"
   }
 }
