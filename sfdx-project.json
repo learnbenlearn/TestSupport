@@ -3,8 +3,8 @@
     {
       "path": "src",
       "package": "TestSupport",
-      "versionName": "ver 1.8",
-      "versionNumber": "1.8.0.NEXT",
+      "versionName": "ver 1.10",
+      "versionNumber": "1.10.0.NEXT",
       "versionDescription": "Package containing Apex classes for bulk generation of test data."
     }
   ],
@@ -23,6 +23,8 @@
     "TestSupport@1.5.0-1": "04t8c000000vFyXAAU",
     "TestSupport@1.6.0-1": "04t8c000000vFycAAE",
     "TestSupport@1.7.0-1": "04t8c000000vFyhAAE",
-    "TestSupport@1.8.0-1": "04t8c000000vG3cAAE"
+    "TestSupport@1.8.0-1": "04t8c000000vG3cAAE",
+    "TestSupport@1.9.0-1": "04t8c000000vGAiAAM",
+    "TestSupport@1.10.0-1": "04t8c000000vGAnAAM"
   }
 }

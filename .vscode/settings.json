@@ -2,5 +2,14 @@
     "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": false,
     "apexPMD.rulesets": [
         ".pmdrules.xml"
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".mule": true
+    }
 }

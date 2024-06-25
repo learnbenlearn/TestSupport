@@ -10,7 +10,7 @@ public class BooleanField extends TestSupport.TestDataField {
         this.currentBoolValue = initialBoolValue;
         this.field = field;
         this.isDynamic = true;
-        this.fieldJSON = '"' + field.getDescribe().getName() + '": {0}"';
+        this.fieldJSON = '"' + field.getDescribe().getName() + '": {0}';
     }
 
     public override String getFieldJSON() {
