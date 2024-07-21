@@ -3,15 +3,15 @@
     {
       "path": "src",
       "package": "TestSupport",
-      "versionName": "ver 1.10",
-      "versionNumber": "1.10.0.NEXT",
+      "versionName": "ver 1.11",
+      "versionNumber": "1.11.0.NEXT",
       "versionDescription": "Package containing Apex classes for bulk generation of test data."
     }
   ],
   "name": "TestSupport",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0",
+  "sourceApiVersion": "61.0",
   "packageAliases": {
     "TestSupport": "0Ho8c000000Kz38CAC",
     "TestSupport@0.1.0-1": "04t8c000000iBHNAA2",
@@ -25,6 +25,7 @@
     "TestSupport@1.7.0-1": "04t8c000000vFyhAAE",
     "TestSupport@1.8.0-1": "04t8c000000vG3cAAE",
     "TestSupport@1.9.0-1": "04t8c000000vGAiAAM",
-    "TestSupport@1.10.0-1": "04t8c000000vGAnAAM"
+    "TestSupport@1.10.0-1": "04t8c000000vGAnAAM",
+    "TestSupport@1.11.0-1": "04t8c000000vGhnAAE"
   }
 }

@@ -1,5 +1,16 @@
+/**
+ * TestSupport.TestDataField implementation for DateTime fields
+ * @author Ben Learn
+ * @since 07-21-2024
+ * @group TestSupport
+ */
 @isTest
 public class DateTimeField extends TestSupport.TestDataField {
+    /**
+     * Constructor to set up field specification for a DateTime field
+     * @param field 
+     * @param dt 
+     */    
     public DateTimeField(Schema.SObjectField field, DateTime dt) {
         this.field = field;
         this.fieldJSON = String.format(

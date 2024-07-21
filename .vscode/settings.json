@@ -1,5 +1,5 @@
 {
-    "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": false,
+    "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": true,
     "apexPMD.rulesets": [
         ".pmdrules.xml"
     ],
@@ -11,5 +11,7 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         ".mule": true
-    }
+    },
+    "codeAnalyzer.pMD.customConfigFile": ".pmdrules.xml",
+    "codeAnalyzer.normalizeSeverity.enabled": true
 }

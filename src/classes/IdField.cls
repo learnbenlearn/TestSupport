@@ -1,7 +1,18 @@
+/**
+ * TestSupport.TestDataField implementation for Id fields. For each new record, will generate a fake record ID that consists of the three character key prefix for the specified
+ * sObject followed by an incremented integer
+ * @author Ben Learn
+ * @since 07-21-2024
+ * @group TestSupport
+ */
 @isTest
 public class IdField extends TestSupport.TestDataField {
     private Integer counter;
 
+    /**
+     * Constructor to set up field specification for an Id field
+     * @param field 
+     */    
     public IdField(Schema.SObjectField field) {
         this.counter = 0;
         

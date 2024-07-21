@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Test Support</title>
+    <meta charset="UTF-8">
+    <script type="module" src="./assets/index.js"></script>
+    <script type="module" src="./assets/search-idx.js"></script>
+    <script type="module" src="./assets/search.js"></script>
+    <script charset="UTF-8" src="./assets/highlight.js"></script>
+    <script charset="UTF-8" src="./assets/mark.js"></script>
+    <script charset="UTF-8" src="./assets/lunr.js"></script>
+    <link rel="stylesheet" href="./assets/highlight.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/index.css" />
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+  </head>
+
+  <body>
+    <div id="side-bar">
+
+      <div id="logo-container">
+        <div class="title">
+          Test Support
+        </div>
+        <img src="assets/logo.png" />
+        <div class="subtitle">
+          Powered by <a target="_blank" rel="noopener noreferrer" href="https://github.com/no-stack-dub-sack/apexdox-vs-code">ApexDox VS Code</a>'
+        </div>
+      </div>
+      <div id="search-wrapper">
+        <div class="search-icon"></div>
+        <input id="search-input" type="text" autocomplete="off" placeholder="Search...">
+      </div>
+      <ul id="search-results" class=""></ul>
+      <div class="navbar">
+        <nav role="navigation">
+          <a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');">
+            Home
+          </a>
+          <details id="TestSupport" class="group-name">
+            <summary id="header-TestSupport" class="nav-header">
+              <span>TestSupport</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="BooleanField" id="item-BooleanField" class="nav-item class " onclick="goToLocation('BooleanField.html');">
+                <a tabindex="1" href="javascript:void(0)">BooleanField</a>
+              </li>
+              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class " onclick="goToLocation('ControlledValueField.html');">
+                <a tabindex="1" href="javascript:void(0)">ControlledValueField</a>
+              </li>
+              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class " onclick="goToLocation('CounterSuffixField.html');">
+                <a tabindex="1" href="javascript:void(0)">CounterSuffixField</a>
+              </li>
+              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class " onclick="goToLocation('DateTimeField.html');">
+                <a tabindex="1" href="javascript:void(0)">DateTimeField</a>
+              </li>
+              <li title="IdField" id="item-IdField" class="nav-item class " onclick="goToLocation('IdField.html');">
+                <a tabindex="1" href="javascript:void(0)">IdField</a>
+              </li>
+              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class " onclick="goToLocation('PicklistValueManager.html');">
+                <a tabindex="1" href="javascript:void(0)">PicklistValueManager</a>
+              </li>
+              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class " onclick="goToLocation('RandomIntegerField.html');">
+                <a tabindex="1" href="javascript:void(0)">RandomIntegerField</a>
+              </li>
+              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class " onclick="goToLocation('RandomPicklistValueField.html');">
+                <a tabindex="1" href="javascript:void(0)">RandomPicklistValueField</a>
+              </li>
+              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class " onclick="goToLocation('RelationshipField.html');">
+                <a tabindex="1" href="javascript:void(0)">RelationshipField</a>
+              </li>
+              <li title="TestSupport" id="item-TestSupport" class="nav-item class " onclick="goToLocation('TestSupport.html');">
+                <a tabindex="1" href="javascript:void(0)">TestSupport</a>
+              </li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+    <table id="content">
+      <tr>
+        <td class="scoping-panel">
+          Show: <input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" />
+          <label for="cbx-all">All</label>&nbsp;&nbsp;
+          <input type="checkbox" checked="true" id="cbx-global" onclick="toggleScope('global', this.checked);" />
+          <label for="cbx-global">
+            global
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
+          <label for="cbx-public">
+            public
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
+          <label for="cbx-protected">
+            protected
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
+          <label for="cbx-webservice">
+            webService
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="doc-page">
+
+          <div class="section">
+
+            <h2 class="class-title top-level-type" id="TestSupport">
+              <span>TestSupport</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Main class for support generation of mock data for Apex tests.
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+              <div class="class-annotations">@isTest</div>
+              <div class="class-signature">
+                public class TestSupport
+              </div>
+              <div class="class-subtitle">
+                Author
+              </div>
+              <div class="class-subtitle-description">
+                Ben Learn
+              </div>
+              <div class="class-subtitle">
+                Since
+              </div>
+              <div class="class-subtitle-description">
+                <li>07-21-2024</li>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">TestSupport Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.generateTestUser">
+                      generateTestUser (alias, email, lastName, profileName, username)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Helper method to generate test user with provided details
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.generateTestUser_1">
+                      generateTestUser (alias, email, lastName, profileName, timeZoneSidKey, username)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Overloaded helper method to generate test user with provided details including custom timeZoneSidKey
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.getRandomInteger">
+                      getRandomInteger (maxValue)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Helper method to generate a random integer between 0 and a provided maxValue
+                    </div>
+                  </li>
+                </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.generateTestUser">
+                    <span>generateTestUser(alias, email, lastName, profileName, username)</span>
+                  </h4>
+                  <div class="method-description">
+                    Helper method to generate test user with provided details
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public static User generateTestUser(String alias, String email, String lastName, String profileName, String username)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">alias</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">email</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">lastName</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">profileName</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">username</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">User</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.generateTestUser_1">
+                    <span>generateTestUser(alias, email, lastName, profileName, timeZoneSidKey, username)</span>
+                  </h4>
+                  <div class="method-description">
+                    Overloaded helper method to generate test user with provided details including custom timeZoneSidKey
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public static User generateTestUser(String alias, String email, String lastName, String profileName, String timeZoneSidKey, String username)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">alias</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">email</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">lastName</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">profileName</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">timeZoneSidKey</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="param-name">username</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">String</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">User</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.getRandomInteger">
+                    <span>getRandomInteger(maxValue)</span>
+                  </h4>
+                  <div class="method-description">
+                    Helper method to generate a random integer between 0 and a provided maxValue
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public static Integer getRandomInteger(Integer maxValue)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">maxValue</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Integer</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">Integer</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+
+            <h2 class="class-title " id="TestSupport.DataGeneration">
+              <span>TestSupport.DataGeneration</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Abstract class to generate mock data for sObjects
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public abstract class DataGeneration
+              </div>
+            </div>
+            <div class="subsection properties TestSupport_DataGeneration">
+              <h3 class="subsection-title properties">TestSupport.DataGeneration Properties</h3>
+              <table class="attributes-table properties">
+
+                <tr>
+                  <th>Name</th>
+                  <th>Signature</th>
+
+                  <th>Description</th>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>defaultSpecsByField</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected Map&lt;Schema.SObjectField, TestDataField&gt; defaultSpecsByField
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>generateMasterRecords</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Boolean generateMasterRecords
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Public property to determine if the master records should be generated. Only used when generateRecordIDs is also true. Defaulted to false in constructor
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>generateRecordIDs</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Boolean generateRecordIDs
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Public property to determine if fake record IDs should be generated. Should be set to false when generated records are going to be inserted. Defaulted to true in constructor
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>generatorReturnValue</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public String generatorReturnValue
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Public property to specify whether generate() calls should return only newly generated records or all records that have been generated to that point. Defaulted to new in constructor
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>idField</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected Schema.SObjectField idField
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>idFieldSpec</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected IdField idFieldSpec
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>modifiedRecords</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public List&lt;sObject&gt; modifiedRecords
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Public property to hold modified copies of generated records. Used for modifying records before update operations or mocking of update operations
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>numberToGenerate</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Integer numberToGenerate
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Public property to specify number of mock records to generate on each call to generate(). Defaulted to 200 in constructor
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>records</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public List&lt;sObject&gt; records
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Property to hold all generated records
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>S_OBJECT_TYPE</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected final String S_OBJECT_TYPE
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>set</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected set
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>set</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected set
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>specsByField</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected Map&lt;Schema.SObjectField, TestDataField&gt; specsByField
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>useFieldDefaults</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Boolean useFieldDefaults
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    Public property to determine if default field specifications should be used. Defaulted to true in constructor
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">TestSupport.DataGeneration Constructors</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method protected">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.DataGeneration">
+                      DataGeneration (options)
+                    </a>
+
+                  </li>
+                  <li class="method protected">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.DataGeneration_1">
+                      DataGeneration (options, fieldSpecs)
+                    </a>
+
+                  </li>
+                </ul>
+                <div class="method protected">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.DataGeneration">
+                    <span>DataGeneration(options)</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    protected DataGeneration(Map&lt;String, Object&gt; options)
+                  </div>
+                </div>
+                <div class="method protected">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.DataGeneration_1">
+                    <span>DataGeneration(options, fieldSpecs)</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    protected DataGeneration(Map&lt;String, Object&gt; options, List&lt;TestDataField&gt; fieldSpecs)
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">TestSupport.DataGeneration Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.changeField">
+                      changeField (fieldToChange)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Fluent method to change the value of a specified field in the modifiedRecords property. Should only be called if field subclass implements changeFieldValue(Object currentFieldValue)
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.changeField_1">
+                      changeField (fieldToChange, newValue)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Overloaded fluent method to change the value of a specified field in the modifiedRecords property
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.clearField">
+                      clearField (fieldToClear)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Fluent method to clear the value of a specified field in the modifiedRecords property
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.generate">
+                      generate ()
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Public method to generate mock data. Made virtual to allow subclasses to provide their own implementations if needed
+                    </div>
+                  </li>
+                  <li class="method protected">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.loadDefaultSpecsByField">
+                      loadDefaultSpecsByField ()
+                    </a>
+
+                  </li>
+                  <li class="method protected">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.loadMasterDetailFields">
+                      loadMasterDetailFields ()
+                    </a>
+
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.overwriteFieldSpecs">
+                      overwriteFieldSpecs (fieldSpecs)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Public method to overwrite all field specifications after instantiation of DataGeneration subclass. Clears all existing specifications (whether a new specification for that field is provided or not) and replaces them with provided field specifications.
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.resetRecordChanges">
+                      resetRecordChanges ()
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Fluent method to reset modifiedRecords property so that it matches records property. Changes to the existing records can then be made for purposes of update calls or mocking update operations. Only needs to be called if wanting to discard existing record changes that have already been made
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.setFieldSpec">
+                      setFieldSpec (fieldSpec)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Public method to set a field specification after instantiation of DataGeneration subclass. If a specification already exists for the provided field, this method will overwrite that existing specification. All other existing field specifications will be preserved.
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.DataGeneration.setFieldSpecs">
+                      setFieldSpecs (fieldSpecs)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Public method to set multiple field specifications after instantiation of DataGeneration subclass. Any specifications that already exist for provided fields will be overridden by this method. All other existing field specifications will be preserved.
+                    </div>
+                  </li>
+                </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.changeField">
+                    <span>changeField(fieldToChange)</span>
+                  </h4>
+                  <div class="method-description">
+                    Fluent method to change the value of a specified field in the modifiedRecords property. Should only be called if field subclass implements changeFieldValue(Object currentFieldValue)
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration changeField(Schema.SObjectField fieldToChange)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldToChange</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Schema.SObjectField</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Exceptions
+                  </div>
+                  <div class="method-subtitle-description">
+                    throws TSException if there is not an existing field specification for the provided field
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.changeField_1">
+                    <span>changeField(fieldToChange, newValue)</span>
+                  </h4>
+                  <div class="method-description">
+                    Overloaded fluent method to change the value of a specified field in the modifiedRecords property
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration changeField(Schema.SObjectField fieldToChange, Object newValue)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldToChange</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Schema.SObjectField</code>
+                  </div>
+                  <div class="param-name">newValue</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Object</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.clearField">
+                    <span>clearField(fieldToClear)</span>
+                  </h4>
+                  <div class="method-description">
+                    Fluent method to clear the value of a specified field in the modifiedRecords property
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration clearField(Schema.SObjectField fieldToClear)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldToClear</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Schema.SObjectField</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.generate">
+                    <span>generate()</span>
+                  </h4>
+                  <div class="method-description">
+                    Public method to generate mock data. Made virtual to allow subclasses to provide their own implementations if needed
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public virtual List&lt;sObject&gt; generate()
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">List&lt;sObject&gt;</code>
+                  </div>
+                </div>
+                <div class="method protected">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.loadDefaultSpecsByField">
+                    <span>loadDefaultSpecsByField()</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    protected virtual Map&lt;Schema.SObjectField, TestDataField&gt; loadDefaultSpecsByField()
+                  </div>
+                </div>
+                <div class="method protected">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.loadMasterDetailFields">
+                    <span>loadMasterDetailFields()</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    protected virtual Map&lt;Schema.SObjectField, RelationshipField&gt; loadMasterDetailFields()
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.overwriteFieldSpecs">
+                    <span>overwriteFieldSpecs(fieldSpecs)</span>
+                  </h4>
+                  <div class="method-description">
+                    Public method to overwrite all field specifications after instantiation of DataGeneration subclass. Clears all existing specifications (whether a new specification for that field is provided or not) and replaces them with provided field specifications.
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration overwriteFieldSpecs(List&lt;TestDataField&gt; fieldSpecs)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldSpecs</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">List&lt;TestDataField&gt;</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.resetRecordChanges">
+                    <span>resetRecordChanges()</span>
+                  </h4>
+                  <div class="method-description">
+                    Fluent method to reset modifiedRecords property so that it matches records property. Changes to the existing records can then be made for purposes of update calls or mocking update operations. Only needs to be called if wanting to discard existing record changes that have already been made
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration resetRecordChanges()
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.setFieldSpec">
+                    <span>setFieldSpec(fieldSpec)</span>
+                  </h4>
+                  <div class="method-description">
+                    Public method to set a field specification after instantiation of DataGeneration subclass. If a specification already exists for the provided field, this method will overwrite that existing specification. All other existing field specifications will be preserved.
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration setFieldSpec(TestDataField fieldSpec)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldSpec</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">TestDataField</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.DataGeneration.setFieldSpecs">
+                    <span>setFieldSpecs(fieldSpecs)</span>
+                  </h4>
+                  <div class="method-description">
+                    Public method to set multiple field specifications after instantiation of DataGeneration subclass. Any specifications that already exist for provided fields will be overridden by this method. All other existing field specifications will be preserved.
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public DataGeneration setFieldSpecs(List&lt;TestDataField&gt; fieldSpecs)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldSpecs</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">List&lt;TestDataField&gt;</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">DataGeneration</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+
+            <h2 class="class-title " id="TestSupport.TestDataField">
+              <span>TestSupport.TestDataField</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Virtual class to represent fields in implementations/instantiations of DataGeneration class and subclasses
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public virtual class TestDataField
+              </div>
+            </div>
+            <div class="subsection properties TestSupport_TestDataField">
+              <h3 class="subsection-title properties">TestSupport.TestDataField Properties</h3>
+              <table class="attributes-table properties">
+
+                <tr>
+                  <th>Name</th>
+                  <th>Signature</th>
+
+                  <th>Description</th>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>field</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Schema.SObjectField field
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    field represented by the instantiation of this class
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>fieldJSON</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected String fieldJSON
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>isDynamic</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Boolean isDynamic
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+                    public property determining if the field has a dynamic value or predefined constant value
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>set</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected set
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>value</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected Object value
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">TestSupport.TestDataField Constructors</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method protected">
+                    <a class="methods-toc__entry " href="#TestSupport.TestDataField.TestDataField">
+                      TestDataField ()
+                    </a>
+
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.TestDataField.TestDataField_1">
+                      TestDataField (field, value)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Constructor for basic field specifications with a constant (non-dynamic) value
+                    </div>
+                  </li>
+                </ul>
+                <div class="method protected">
+                  <h4 class="method-title " id="TestSupport.TestDataField.TestDataField">
+                    <span>TestDataField()</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+                  <div class="method-annotations">@SuppressWarnings('PMD.EmptyStatementBlock')</div>
+                  <div class="method-signature">
+                    protected TestDataField()
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.TestDataField.TestDataField_1">
+                    <span>TestDataField(field, value)</span>
+                  </h4>
+                  <div class="method-description">
+                    Constructor for basic field specifications with a constant (non-dynamic) value
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public TestDataField(Schema.SObjectField field, Object value)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">field</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Schema.SObjectField</code>
+                  </div>
+                  <div class="param-name">value</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Object</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">TestSupport.TestDataField Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.TestDataField.changeFieldValue">
+                      changeFieldValue ()
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Virtual method to change the value of the field represented by an instantiation of this class. Not implemented in parent class, but made available for subclasses if they can change the field value without needing any further information about what the new field value should be
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.TestDataField.changeFieldValue_1">
+                      changeFieldValue (currentFieldValue)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Virtual method to change the value of the field represented by an instantation of this class. Not implemented in parent class, but made available for subclasses if they can change the field value based only on the current value of the field
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.TestDataField.getFieldJSON">
+                      getFieldJSON ()
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Virtual method to return field-value pair in JSON format. Called by DataGeneration.generate() method
+                    </div>
+                  </li>
+                </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.TestDataField.changeFieldValue">
+                    <span>changeFieldValue()</span>
+                  </h4>
+                  <div class="method-description">
+                    Virtual method to change the value of the field represented by an instantiation of this class. Not implemented in parent class, but made available for subclasses if they can change the field value without needing any further information about what the new field value should be
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public virtual Object changeFieldValue()
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">Object</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.TestDataField.changeFieldValue_1">
+                    <span>changeFieldValue(currentFieldValue)</span>
+                  </h4>
+                  <div class="method-description">
+                    Virtual method to change the value of the field represented by an instantation of this class. Not implemented in parent class, but made available for subclasses if they can change the field value based only on the current value of the field
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public virtual Object changeFieldValue(Object currentFieldValue)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">currentFieldValue</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Object</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">Object</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.TestDataField.getFieldJSON">
+                    <span>getFieldJSON()</span>
+                  </h4>
+                  <div class="method-description">
+                    Virtual method to return field-value pair in JSON format. Called by DataGeneration.generate() method
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public virtual String getFieldJSON()
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">String</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+
+            <h2 class="class-title " id="TestSupport.TSException">
+              <span>TestSupport.TSException</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Custom exception
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public class TSException extends Exception
+              </div>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+
+          <div>
+            <a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer">
+              Powered By ApexDox VS Code
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>
