@@ -5,7 +5,7 @@
  * @since 07-21-2024
  * @group TestSupport
  */
-@isTest
+@IsTest
 public class ControlledValueField extends TestSupport.TestDataField {
     private Integer counter;
     private Integer numSuppliedValues;
@@ -13,9 +13,9 @@ public class ControlledValueField extends TestSupport.TestDataField {
 
     /**
      * Constructor to set up field specification for a controlled value field
-     * @param field 
-     * @param suppliedValues 
-     */    
+     * @param field
+     * @param suppliedValues
+     */
     public ControlledValueField(Schema.SObjectField field, List<Object> suppliedValues) {
         this.counter = 0;
         this.field = field;

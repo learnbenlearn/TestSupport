@@ -1,7 +1,6 @@
-@isTest
+@IsTest
 private class PicklistValueManagerTests {
-
-    @isTest
+    @IsTest
     private static void getFieldValues_PicklistField_ReturnsFieldValues() {
         List<String> accountRatings = PicklistValueManager.getValuesForSObjectField(Account.Rating);
         List<String> accountOwnerships = PicklistValueManager.getValuesForSObjectField(Account.Ownership);
@@ -11,11 +10,12 @@ private class PicklistValueManagerTests {
         Assert.areEqual(accountRatings, PicklistValueManager.getFieldValues(Account.sObjectType, Account.Rating), 'Unequal picklist values when PicklistValueManager has entries for object and field.');
     }
 
-    @isTest
+    @IsTest
     private static void getFieldValues_NonPicklistField_ThrowsError() {
         Exception err;
         try {
-            List<String> accountNames = PicklistValueManager.getFieldValues(Account.sObjectType, Account.Name);
+            PicklistValueManager.getFieldValues(Account.sObjectType, Account.Name);
+            Assert.fail('Expected exception was not thrown when calling PicklistValueManager with non-picklist field.');
         } catch(Exception e) {
             err = e;
         }

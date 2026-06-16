@@ -114,98 +114,57 @@
 
           <div class="section">
 
-            <h2 class="class-title top-level-type" id="PicklistValueManager">
-              <span>PicklistValueManager</span>
+            <h2 class="class-title top-level-type" id="DateField">
+              <span>DateField</span>
             </h2>
             <div class="class-container">
 
-              <div class="class-description">
-                Test utility class to abstract retrieval of picklist values for sObject fields and prevent storing picklist values for the same field multiple times in memory
-              </div>
               <div class="class-subtitle">
                 Signature
               </div>
               <div class="class-annotations">@isTest</div>
               <div class="class-signature">
-                public class PicklistValueManager
-              </div>
-              <div class="class-subtitle">
-                Author
-              </div>
-              <div class="class-subtitle-description">
-                Ben Learn
-              </div>
-              <div class="class-subtitle">
-                Since
-              </div>
-              <div class="class-subtitle-description">
-                <li>07-21-2024</li>
+                public class DateField extends TestSupport.TestDataField
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">PicklistValueManager Methods</h3>
+              <h3 class="subsection-title methods">DateField Constructors</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#PicklistValueManager.getFieldValues">
-                      getFieldValues (sObjectType, sObjectField)
+                    <a class="methods-toc__entry " href="#DateField.DateField">
+                      DateField (field, dateValue)
                     </a>
 
                     <div class="methods-toc__description">
-                      Public method to return the values for the picklist field specified by provided sObjectType and sObjectField
+                      Constructor to set up field specification for a Date field
                     </div>
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="PicklistValueManager.getFieldValues">
-                    <span>getFieldValues(sObjectType, sObjectField)</span>
+                  <h4 class="method-title " id="DateField.DateField">
+                    <span>DateField(field, dateValue)</span>
                   </h4>
                   <div class="method-description">
-                    Public method to return the values for the picklist field specified by provided sObjectType and sObjectField
+                    Constructor to set up field specification for a Date field
                   </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
 
                   <div class="method-signature">
-                    public static List&lt;String&gt; getFieldValues(Schema.SObjectType sObjectType, Schema.SObjectField sObjectField)
+                    public DateField(Schema.SObjectField field, Date dateValue)
                   </div>
                   <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">sObjectType</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Schema.SObjectType</code>
-                  </div>
-                  <div class="param-name">sObjectField</div>
+                  <div class="param-name">field</div>
                   <div class="param-type">
                     Type: <code class="code-inline">Schema.SObjectField</code>
                   </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;String&gt;</code>
+                  <div class="param-name">dateValue</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Date</code>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="section">
-
-            <h2 class="class-title " id="PicklistValueManager.PicklistValueManagerException">
-              <span>PicklistValueManager.PicklistValueManagerException</span>
-            </h2>
-            <div class="class-container">
-
-              <div class="class-description">
-                Custom exception
-              </div>
-              <div class="class-subtitle">
-                Signature
-              </div>
-
-              <div class="class-signature">
-                public class PicklistValueManagerException extends Exception
               </div>
             </div>
           </div>

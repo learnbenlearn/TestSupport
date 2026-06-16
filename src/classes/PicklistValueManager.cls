@@ -4,16 +4,16 @@
  * @since 07-21-2024
  * @group TestSupport
  */
-@isTest
+@IsTest
 public class PicklistValueManager {
     private static Map<Schema.SObjectType, Map<Schema.SObjectField, List<String>>> picklistValuesByObjectField = new Map<Schema.SObjectType, Map<Schema.SObjectField, List<String>>>();
 
     /**
      * Public method to return the values for the picklist field specified by provided sObjectType and sObjectField
-     * @param sObjectType 
-     * @param sObjectField 
+     * @param sObjectType
+     * @param sObjectField
      * @return  `List<String>`
-     */    
+     */
     public static List<String> getFieldValues(Schema.SObjectType sObjectType, Schema.SObjectField sObjectField) {
         List<String> picklistValues;
         if(picklistValuesByObjectField.containsKey(sObjectType)) {
@@ -32,7 +32,7 @@ public class PicklistValueManager {
         return picklistValues;
     }
 
-    @testVisible
+    @TestVisible
     private static List<String> getValuesForSObjectField(Schema.SObjectField sObjectField) {
         if(sObjectField.getDescribe().getType() != Schema.DisplayType.Picklist && sObjectField.getDescribe().getType() != Schema.DisplayType.MultiPicklist) {
             throw new PicklistValueManagerException('PicklistValueManager called with non-picklist field.');
@@ -47,6 +47,6 @@ public class PicklistValueManager {
 
     /**
      * Custom exception
-     */    
+     */
     public class PicklistValueManagerException extends Exception {}
 }

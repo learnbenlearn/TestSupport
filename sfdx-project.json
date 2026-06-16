@@ -3,15 +3,19 @@
     {
       "path": "src",
       "package": "TestSupport",
-      "versionName": "ver 1.11",
-      "versionNumber": "1.11.0.NEXT",
-      "versionDescription": "Package containing Apex classes for bulk generation of test data."
+      "versionName": "Genoa",
+      "versionNumber": "1.13.0.NEXT",
+      "versionDescription": "Package containing Apex classes for generation of test/mock data.",
+      "default": true
+    },
+    {
+      "path": "example"
     }
   ],
   "name": "TestSupport",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "61.0",
+  "sourceApiVersion": "66.0",
   "packageAliases": {
     "TestSupport": "0Ho8c000000Kz38CAC",
     "TestSupport@0.1.0-1": "04t8c000000iBHNAA2",
@@ -26,6 +30,9 @@
     "TestSupport@1.8.0-1": "04t8c000000vG3cAAE",
     "TestSupport@1.9.0-1": "04t8c000000vGAiAAM",
     "TestSupport@1.10.0-1": "04t8c000000vGAnAAM",
-    "TestSupport@1.11.0-1": "04t8c000000vGhnAAE"
+    "TestSupport@1.11.0-1": "04t8c000000vGhnAAE",
+    "TestSupport@1.12.0-1": "04t8c000000vH2MAAU",
+    "TestSupport@1.13.0-1": "04tg7000000C0p3AAC",
+    "TestSupport@1.13.0-2": "04tg7000000C29JAAS"
   }
 }

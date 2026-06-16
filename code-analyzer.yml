@@ -1,0 +1,120 @@
+# ======================================================================
+# CODE ANALYZER CONFIGURATION
+# ======================================================================
+config_root: null
+log_folder: null
+log_level: 4
+rules:
+  retire-js: {}
+  regex: {}
+  eslint: {}
+  flow: {}
+  cpd: {}
+  pmd:
+    ApexUnitTestClassShouldHaveRunAs:
+      disabled: true
+  sfge: {}
+engines:
+  retire-js:
+    disable_engine: false
+  regex:
+    disable_engine: false
+    custom_rules: {}
+  eslint:
+    disable_engine: false
+    eslint_config_file: null
+    eslint_ignore_file: null
+    auto_discover_eslint_config: false
+    disable_javascript_base_config: false
+    disable_lwc_base_config: false
+    disable_slds_base_config: false
+    disable_typescript_base_config: false
+    file_extensions:
+      javascript:
+        - .js
+        - .cjs
+        - .mjs
+        - .jsx
+      typescript:
+        - .ts
+        - .tsx
+      html:
+        - .html
+        - .htm
+        - .cmp
+      css:
+        - .css
+        - .scss
+      other: []
+  flow:
+    disable_engine: false
+    python_command: null
+  cpd:
+    disable_engine: false
+    java_command: null
+    file_extensions:
+      apex:
+        - .cls
+        - .trigger
+      html:
+        - .html
+        - .htm
+        - .xhtml
+        - .xht
+        - .shtml
+        - .cmp
+      javascript:
+        - .js
+        - .cjs
+        - .mjs
+      typescript:
+        - .ts
+      visualforce:
+        - .page
+        - .component
+      xml:
+        - .xml
+    minimum_tokens:
+      apex: 100
+      html: 100
+      javascript: 100
+      typescript: 100
+      visualforce: 100
+      xml: 100
+    skip_duplicate_files: false
+  pmd:
+    disable_engine: false
+    java_command: null
+    file_extensions:
+      apex:
+        - .cls
+        - .trigger
+      html:
+        - .html
+        - .htm
+        - .xhtml
+        - .xht
+        - .shtml
+        - .cmp
+      javascript:
+        - .js
+        - .cjs
+        - .mjs
+      typescript:
+        - .ts
+      visualforce:
+        - .page
+        - .component
+      xml:
+        - .xml
+    java_classpath_entries: []
+    custom_rulesets: [
+      ./.pmdrules.xml
+    ]
+  sfge:
+    disable_engine: false
+    disable_limit_reached_violations: false
+    java_command: null
+    java_max_heap_size: null
+    java_thread_count: 4
+    java_thread_timeout: 900000

@@ -37,6 +37,17 @@
           <a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');">
             Home
           </a>
+          <details id="Miscellaneous" class="group-name">
+            <summary id="header-Miscellaneous" class="nav-header">
+              <span>Miscellaneous</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="DateField" id="item-DateField" class="nav-item class " onclick="goToLocation('DateField.html');">
+                <a tabindex="1" href="javascript:void(0)">DateField</a>
+              </li>
+            </ul>
+          </details>
           <details id="TestSupport" class="group-name">
             <summary id="header-TestSupport" class="nav-header">
               <span>TestSupport</span>
@@ -136,6 +147,15 @@
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.formatTwoDigit">
+                      formatTwoDigit (num)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Helper method to return one digit integers as two digits left-padded with a 0. Used for date/datetime formatting
+                    </div>
+                  </li>
+                  <li class="method public">
                     <a class="methods-toc__entry " href="#TestSupport.generateTestUser">
                       generateTestUser (alias, email, lastName, profileName, username)
                     </a>
@@ -163,6 +183,32 @@
                     </div>
                   </li>
                 </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.formatTwoDigit">
+                    <span>formatTwoDigit(num)</span>
+                  </h4>
+                  <div class="method-description">
+                    Helper method to return one digit integers as two digits left-padded with a 0. Used for date/datetime formatting
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public static String formatTwoDigit(Integer num)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">num</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">Integer</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">String</code>
+                  </div>
+                </div>
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.generateTestUser">
                     <span>generateTestUser(alias, email, lastName, profileName, username)</span>
@@ -427,19 +473,6 @@
                   </td>
                 </tr>
                 <tr class="property ">
-                  <td class="attribute-name"><span>S_OBJECT_TYPE</span></td>
-                  <td>
-                    <div class="attribute-signature">
-                      protected final String S_OBJECT_TYPE
-                    </div>
-                  </td>
-
-
-                  <td class="attribute-description">
-
-                  </td>
-                </tr>
-                <tr class="property ">
                   <td class="attribute-name"><span>set</span></td>
                   <td>
                     <div class="attribute-signature">
@@ -457,6 +490,19 @@
                   <td>
                     <div class="attribute-signature">
                       protected set
+                    </div>
+                  </td>
+
+
+                  <td class="attribute-description">
+
+                  </td>
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>SOBJECT_TYPE</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      protected final String SOBJECT_TYPE
                     </div>
                   </td>
 

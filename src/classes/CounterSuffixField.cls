@@ -5,15 +5,15 @@
  * @since 07-21-2024
  * @group TestSupport
  */
-@isTest
+@IsTest
 public class CounterSuffixField extends TestSupport.TestDataField {
     private Integer counter;
 
     /**
      * Constructor to set up field specification for a counter suffix field
-     * @param field 
-     * @param value 
-     */    
+     * @param field
+     * @param value
+     */
     public CounterSuffixField(Schema.SObjectField field, Object value) {
         this.counter = 0;
 

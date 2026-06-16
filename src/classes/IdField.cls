@@ -5,14 +5,14 @@
  * @since 07-21-2024
  * @group TestSupport
  */
-@isTest
+@IsTest
 public class IdField extends TestSupport.TestDataField {
     private Integer counter;
 
     /**
      * Constructor to set up field specification for an Id field
-     * @param field 
-     */    
+     * @param field
+     */
     public IdField(Schema.SObjectField field) {
         this.counter = 0;
         

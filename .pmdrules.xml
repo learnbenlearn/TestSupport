@@ -15,6 +15,7 @@
         <properties>
             <property name="reportMissingDescription" value="false" />
             <property name="reportPrivate" value="false" />
+            <property name="reportProperty" value="false" />
             <property name="reportProtected" value="false" />
         </properties>
     </rule>

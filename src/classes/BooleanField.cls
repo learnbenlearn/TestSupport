@@ -4,23 +4,23 @@
  * @since 07-21-2024
  * @group TestSupport
  */
-@isTest
+@IsTest
 public class BooleanField extends TestSupport.TestDataField {
     private Boolean currentBoolValue;
 
     /**
      * Default constructor to set up field specification for a Boolean field. Defaults value for first generated record to true
-     * @param field 
-     */    
+     * @param field
+     */
     public BooleanField(Schema.SObjectField field) {
         this(field, true);
     }
 
     /**
      * Overloaded constructor to set up field specification for a Boolean field with custom value for first generated record
-     * @param field 
-     * @param initialBoolValue 
-     */    
+     * @param field
+     * @param initialBoolValue
+     */
     public BooleanField(Schema.SObjectField field, Boolean initialBoolValue) {
         this.currentBoolValue = initialBoolValue;
         this.field = field;

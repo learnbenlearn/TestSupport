@@ -12,6 +12,6 @@
         "**/Thumbs.db": true,
         ".mule": true
     },
-    "codeAnalyzer.pMD.customConfigFile": ".pmdrules.xml",
-    "codeAnalyzer.normalizeSeverity.enabled": true
+    "xml.preferences.showSchemaDocumentationType": "none",
+    "xml.validation.enabled": false
 }
