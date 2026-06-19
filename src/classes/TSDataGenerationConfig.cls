@@ -2,46 +2,32 @@
 public class TSDataGenerationConfig {
     public enum GeneratorReturnValue {NEW_RECORDS, ALL_RECORDS}
 
-    public final Boolean generateMasterRecords {public get; set;}
-    public final Boolean generateRecordIDs {public get; set;}
-    public final Boolean useFieldDefaults {public get; set;}
-    public final Integer numberToGenerate {public get; set;}
-    public final GeneratorReturnValue generatorReturnValue {public get; set;}
+    public final Boolean generateMasterRecords {get; set;}
+    public final Boolean generateMasterRecordsWasSet {get; set;}
+    public final Boolean generateRecordIDs {get; set;}
+    public final Boolean generateRecordIDsWasSet {get; set;}
+    public final Boolean useFieldDefaults {get; set;}
+    public final Boolean useFieldDefaultsWasSet {get; set;}
+    public final Integer numberToGenerate {get; set;}
+    public final Boolean numberToGenerateWasSet {get; set;}
+    public final GeneratorReturnValue generatorReturnValue {get; set;}
+    public final Boolean generatorReturnValueWasSet {get; set;}
 
     public TSDataGenerationConfig(TSDataGenerationConfigBuilder builder) {
         this.generateMasterRecords = builder.getGenerateMasterRecords();
+        this.generateMasterRecordsWasSet = builder.generateMasterRecordsWasSet;
         this.generateRecordIDs = builder.getGenerateRecordIDs();
+        this.generateRecordIDsWasSet = builder.generateRecordIDsWasSet;
         this.useFieldDefaults = builder.getUseFieldDefaults();
+        this.useFieldDefaultsWasSet = builder.useFieldDefaultsWasSet;
         this.numberToGenerate = builder.getNumberToGenerate();
+        this.numberToGenerateWasSet = builder.numberToGenerateWasSet;
         this.generatorReturnValue = builder.getGeneratorReturnValue();
+        this.generatorReturnValueWasSet = builder.generatorReturnValueWasSet;
     }
 
     public static TSDataGenerationConfigBuilder builder() {
         return new TSDataGenerationConfigBuilder();
-    }
-
-    public static TSDataGenerationConfig fromMap(Map<String, Object> options) {
-        if(options == null) {
-            return builder().build();
-        }
-
-        TSDataGenerationConfigBuilder builder = new TSDataGenerationConfigBuilder();
-        if(options.containsKey('generateMasterRecords')) {
-            builder.setGenerateMasterRecords(Boolean.valueOf(options.get('generateMasterRecords')));
-        }
-        if(options.containsKey('generateRecordIDs')) {
-            builder.setGenerateRecordIDs(Boolean.valueOf(options.get('generateRecordIDs')));
-        }
-        if(options.containsKey('useFieldDefaults')) {
-            builder.setUseFieldDefaults(Boolean.valueOf(options.get('useFieldDefaults')));
-        }
-        if(options.containsKey('numberToGenerate')) {
-            builder.setNumberToGenerate(Integer.valueOf(options.get('numberToGenerate')));
-        }
-        if(options.containsKey('generatorReturnValue')) {
-            builder.setGeneratorReturnValue(getGeneratorReturnValue(String.valueOf(options.get('generatorReturnValue'))));
-        }
-        return builder.build();
     }
 
     private static GeneratorReturnValue getGeneratorReturnValue(String generatorReturnValueString) {
@@ -61,32 +47,79 @@ public class TSDataGenerationConfig {
         private Integer numberToGenerate = 200;
         private TSDataGenerationConfig.GeneratorReturnValue generatorReturnValue;
 
-        public TSDataGenerationConfigBuilder() {
-            this.generatorReturnValue = TSDataGenerationConfig.GeneratorReturnValue.NEW_RECORDS;
+        private Boolean generateMasterRecordsWasSet {
+            get {
+                if(this.generateMasterRecordsWasSet == null) {
+                    this.generateMasterRecordsWasSet = false;
+                }
+                return this.generateMasterRecordsWasSet;
+            }
+            set;
+        }
+        private Boolean generateRecordIDsWasSet {
+            get {
+                if(this.generateRecordIDsWasSet == null) {
+                    this.generateRecordIDsWasSet = false;
+                }
+                return this.generateRecordIDsWasSet;
+            }
+            set;
+        }
+        private Boolean useFieldDefaultsWasSet {
+            get {
+                if(this.useFieldDefaultsWasSet == null) {
+                    this.useFieldDefaultsWasSet = false;
+                }
+                return this.useFieldDefaultsWasSet;
+            }
+            set;
+        }
+        private Boolean numberToGenerateWasSet {
+            get {
+                if(this.numberToGenerateWasSet == null) {
+                    this.numberToGenerateWasSet = false;
+                }
+                return this.numberToGenerateWasSet;
+            }
+            set;
+        }
+        private Boolean generatorReturnValueWasSet {
+            get {
+                if(this.generatorReturnValueWasSet == null) {
+                    this.generatorReturnValueWasSet = false;
+                }
+                return this.generatorReturnValueWasSet;
+            }
+            set;
         }
 
         public TSDataGenerationConfigBuilder setGenerateMasterRecords(Boolean generateMasterRecords) {
             this.generateMasterRecords = generateMasterRecords == null ? false : generateMasterRecords;
+            this.generateMasterRecordsWasSet = true;
             return this;
         }
 
         public TSDataGenerationConfigBuilder setGenerateRecordIDs(Boolean generateRecordIDs) {
             this.generateRecordIDs = generateRecordIDs == null ? true : generateRecordIDs;
+            this.generateRecordIDsWasSet = true;
             return this;
         }
 
         public TSDataGenerationConfigBuilder setUseFieldDefaults(Boolean useFieldDefaults) {
             this.useFieldDefaults = useFieldDefaults == null ? true : useFieldDefaults;
+            this.useFieldDefaultsWasSet = true;
             return this;
         }
 
         public TSDataGenerationConfigBuilder setNumberToGenerate(Integer numberToGenerate) {
             this.numberToGenerate = numberToGenerate == null ? 200 : numberToGenerate;
+            this.numberToGenerateWasSet = true;
             return this;
         }
 
         public TSDataGenerationConfigBuilder setGeneratorReturnValue(TSDataGenerationConfig.GeneratorReturnValue generatorReturnValue) {
             this.generatorReturnValue = generatorReturnValue;
+            this.generatorReturnValueWasSet = true;
             return this;
         }
 

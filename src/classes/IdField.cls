@@ -7,6 +7,7 @@
  */
 @IsTest
 public class IdField extends TestSupport.TestDataField {
+    private static final Integer ID_FIELD_PADDING_LENGTH = 15;
     private Integer counter;
 
     /**
@@ -22,6 +23,6 @@ public class IdField extends TestSupport.TestDataField {
     }
 
     public override String getFieldJSON() {
-        return this.fieldJSON.replace('{0}', String.valueOf(this.counter++).leftPad(15, '0'));
+        return this.fieldJSON.replace('{0}', String.valueOf(this.counter++).leftPad(ID_FIELD_PADDING_LENGTH, '0'));
     }
 }

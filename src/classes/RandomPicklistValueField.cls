@@ -29,7 +29,7 @@ public class RandomPicklistValueField extends TestSupport.TestDataField {
     public override Object changeFieldValue(Object currentFieldValue) {
         Integer currentPicklistIndex = this.picklistValues.indexOf(String.valueOf(currentFieldValue));
         Integer randomIndex = TestSupport.getRandomInteger(this.numPicklistValues - 1);
-        Integer newPicklistIndex = Math.mod(randomIndex == currentPicklistIndex ? randomIndex + 1 : randomIndex, numPicklistValues - 1);
+        Integer newPicklistIndex = Math.mod(randomIndex == currentPicklistIndex ? randomIndex + 1 : randomIndex, numPicklistValues);
         return this.picklistValues[newPicklistIndex];
     }
 }

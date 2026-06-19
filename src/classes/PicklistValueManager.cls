@@ -15,21 +15,17 @@ public class PicklistValueManager {
      * @return  `List<String>`
      */
     public static List<String> getFieldValues(Schema.SObjectType sObjectType, Schema.SObjectField sObjectField) {
-        List<String> picklistValues;
-        if(picklistValuesByObjectField.containsKey(sObjectType)) {
-            if(picklistValuesByObjectField.get(sObjectType).containsKey(sObjectField)) {
-                picklistValues = picklistValuesByObjectField.get(sObjectType).get(sObjectField);
-            } else {
-                picklistValues = getValuesForSObjectField(sObjectField);
-                Map<Schema.SObjectField, List<String>> picklistValuesForSObject = picklistValuesByObjectField.get(sObjectType);
-                picklistValuesForSObject.put(sObjectField, picklistValues);
-                picklistValuesByObjectField.put(sObjectType, picklistValuesForSObject);
-            }
-        } else {
-            picklistValues = getValuesForSObjectField(sObjectField);
-            picklistValuesByObjectField.put(sObjectType, new Map<Schema.SObjectField, List<String>>{sObjectField => picklistValues});
+        if(picklistValuesByObjectField.containsKey(sObjectType) == false) {
+            picklistValuesByObjectField.put(sObjectType, new Map<Schema.SObjectField, List<String>>());
         }
-        return picklistValues;
+
+        Map<Schema.SObjectField, List<String>> fieldMap = picklistValuesByObjectField.get(sObjectType);
+
+        if(fieldMap.containsKey(sObjectField) == false) {
+            fieldMap.put(sObjectField, getValuesForSObjectField(sObjectField));
+        }
+
+        return fieldMap.get(sObjectField);
     }
 
     @TestVisible
