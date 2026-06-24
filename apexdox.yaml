@@ -2,6 +2,7 @@ engine:
   targetDirectory: "${workspaceFolder}/docs"
   source:
     - path: "${workspaceFolder}/src/classes"
+      sourceUrl: "https://github.com/learnbenlearn/TestSupport/tree/main/"
   homePagePath: "${workspaceFolder}/ApexDoxHomePage.html"
   excludes: [
     "*_Tests.cls",
@@ -10,7 +11,8 @@ engine:
   scope: [
     "global",
     "public", 
-    "protected",
-    "webService" 
+    "protected"
   ]
+  sortOrder:
+    "logical"
   title: "Test Support"

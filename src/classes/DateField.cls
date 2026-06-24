@@ -1,3 +1,9 @@
+/**
+ * TestSupport.TestDataField implementation for Date fields
+ * @author Ben Learn
+ * @since 06-24-2026
+ * @group TestSupport
+ */
 @IsTest
 public class DateField extends TestSupport.TestDataField {
     /**

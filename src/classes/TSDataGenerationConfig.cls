@@ -1,3 +1,9 @@
+/**
+ * Immutable configuration object for `TestSupport.DataGeneration` construction. Built using `TSDataGenerationConfigBuilder`
+ * @author Ben Learn
+ * @since 06-24-2026
+ * @group Config
+ */
 @IsTest
 public class TSDataGenerationConfig {
     public final Boolean generateMasterRecords {get; set;}

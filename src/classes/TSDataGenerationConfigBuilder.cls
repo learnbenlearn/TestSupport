@@ -1,3 +1,15 @@
+/**
+ * Fluent builder for `TSDataGenerationConfig`. If not overridden, the following defaults will be used
+ * `generateMasterRecords` => `false`
+ * `generateRecordIDs` => `true`
+ * `generatorMode` => `null`
+ * `generatorReturnValue` => `TSGeneratorReturnValue.NEW_RECORDS`
+ * `numberToGenerate` => `200`
+ * `useFieldDefaults` => `true`
+ * @author Ben Learn
+ * @since 06-24-2026
+ * @group Config
+ */
 @IsTest
 public class TSDataGenerationConfigBuilder {
     private static final Map<TSGeneratorMode, Integer> NUMBER_TO_GENERATE_BY_MODE = new Map<TSGeneratorMode, Integer>{
