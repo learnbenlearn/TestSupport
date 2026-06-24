@@ -43,8 +43,23 @@
             </summary>
             <ul>
               <!-- menu items -->
-              <li title="DateField" id="item-DateField" class="nav-item class " onclick="goToLocation('DateField.html');">
+              <li title="DateField" id="item-DateField" class="nav-item class public" onclick="goToLocation('DateField.html');">
                 <a tabindex="1" href="javascript:void(0)">DateField</a>
+              </li>
+              <li title="RecordTypeField" id="item-RecordTypeField" class="nav-item class public" onclick="goToLocation('RecordTypeField.html');">
+                <a tabindex="1" href="javascript:void(0)">RecordTypeField</a>
+              </li>
+              <li title="TSDataGenerationConfig" id="item-TSDataGenerationConfig" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfig.html');">
+                <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfig</a>
+              </li>
+              <li title="TSDataGenerationConfigBuilder" id="item-TSDataGenerationConfigBuilder" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfigBuilder.html');">
+                <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfigBuilder</a>
+              </li>
+              <li title="TSGeneratorMode" id="item-TSGeneratorMode" class="nav-item class public" onclick="goToLocation('TSGeneratorMode.html');">
+                <a tabindex="1" href="javascript:void(0)">TSGeneratorMode</a>
+              </li>
+              <li title="TSGeneratorReturnValue" id="item-TSGeneratorReturnValue" class="nav-item class public" onclick="goToLocation('TSGeneratorReturnValue.html');">
+                <a tabindex="1" href="javascript:void(0)">TSGeneratorReturnValue</a>
               </li>
             </ul>
           </details>
@@ -54,34 +69,34 @@
             </summary>
             <ul>
               <!-- menu items -->
-              <li title="BooleanField" id="item-BooleanField" class="nav-item class " onclick="goToLocation('BooleanField.html');">
+              <li title="BooleanField" id="item-BooleanField" class="nav-item class public" onclick="goToLocation('BooleanField.html');">
                 <a tabindex="1" href="javascript:void(0)">BooleanField</a>
               </li>
-              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class " onclick="goToLocation('ControlledValueField.html');">
+              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class public" onclick="goToLocation('ControlledValueField.html');">
                 <a tabindex="1" href="javascript:void(0)">ControlledValueField</a>
               </li>
-              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class " onclick="goToLocation('CounterSuffixField.html');">
+              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class public" onclick="goToLocation('CounterSuffixField.html');">
                 <a tabindex="1" href="javascript:void(0)">CounterSuffixField</a>
               </li>
-              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class " onclick="goToLocation('DateTimeField.html');">
+              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class public" onclick="goToLocation('DateTimeField.html');">
                 <a tabindex="1" href="javascript:void(0)">DateTimeField</a>
               </li>
-              <li title="IdField" id="item-IdField" class="nav-item class " onclick="goToLocation('IdField.html');">
+              <li title="IdField" id="item-IdField" class="nav-item class public" onclick="goToLocation('IdField.html');">
                 <a tabindex="1" href="javascript:void(0)">IdField</a>
               </li>
-              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class " onclick="goToLocation('PicklistValueManager.html');">
+              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class public" onclick="goToLocation('PicklistValueManager.html');">
                 <a tabindex="1" href="javascript:void(0)">PicklistValueManager</a>
               </li>
-              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class " onclick="goToLocation('RandomIntegerField.html');">
+              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class public" onclick="goToLocation('RandomIntegerField.html');">
                 <a tabindex="1" href="javascript:void(0)">RandomIntegerField</a>
               </li>
-              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class " onclick="goToLocation('RandomPicklistValueField.html');">
+              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class public" onclick="goToLocation('RandomPicklistValueField.html');">
                 <a tabindex="1" href="javascript:void(0)">RandomPicklistValueField</a>
               </li>
-              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class " onclick="goToLocation('RelationshipField.html');">
+              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class public" onclick="goToLocation('RelationshipField.html');">
                 <a tabindex="1" href="javascript:void(0)">RelationshipField</a>
               </li>
-              <li title="TestSupport" id="item-TestSupport" class="nav-item class " onclick="goToLocation('TestSupport.html');">
+              <li title="TestSupport" id="item-TestSupport" class="nav-item class public" onclick="goToLocation('TestSupport.html');">
                 <a tabindex="1" href="javascript:void(0)">TestSupport</a>
               </li>
             </ul>
@@ -114,20 +129,20 @@
 
           <div class="section">
 
-            <h2 class="class-title top-level-type" id="RandomIntegerField">
-              <span>RandomIntegerField</span>
+            <h2 class="class-title top-level-type" id="IdField">
+              <span>IdField</span>
             </h2>
             <div class="class-container">
 
               <div class="class-description">
-                TestSupport.TestDataField implementation for random integer fields that will have a value between the provided min and max
+                TestSupport.TestDataField implementation for Id fields. For each new record, will generate a fake record ID that consists of the three character key prefix for the specified sObject followed by an incremented integer
               </div>
               <div class="class-subtitle">
                 Signature
               </div>
-              <div class="class-annotations">@isTest</div>
+              <div class="class-annotations">@IsTest</div>
               <div class="class-signature">
-                public class RandomIntegerField extends TestSupport.TestDataField
+                public class IdField extends TestSupport.TestDataField
               </div>
               <div class="class-subtitle">
                 Author
@@ -143,62 +158,54 @@
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">RandomIntegerField Constructors</h3>
+              <h3 class="subsection-title methods">IdField Constructors</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#RandomIntegerField.RandomIntegerField">
-                      RandomIntegerField (field, min, max)
+                    <a class="methods-toc__entry " href="#IdField.IdField">
+                      IdField (field)
                     </a>
 
                     <div class="methods-toc__description">
-                      Constructor to set up field specification for a random integer field
+                      Constructor to set up field specification for an Id field
                     </div>
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="RandomIntegerField.RandomIntegerField">
-                    <span>RandomIntegerField(field, min, max)</span>
+                  <h4 class="method-title " id="IdField.IdField">
+                    <span>IdField(field)</span>
                   </h4>
                   <div class="method-description">
-                    Constructor to set up field specification for a random integer field
+                    Constructor to set up field specification for an Id field
                   </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
 
                   <div class="method-signature">
-                    public RandomIntegerField(Schema.SObjectField field, Integer min, Integer max)
+                    public IdField(Schema.SObjectField field)
                   </div>
                   <div class="method-subtitle">Parameters</div>
                   <div class="param-name">field</div>
                   <div class="param-type">
                     Type: <code class="code-inline">Schema.SObjectField</code>
                   </div>
-                  <div class="param-name">min</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Integer</code>
-                  </div>
-                  <div class="param-name">max</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Integer</code>
-                  </div>
                 </div>
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">RandomIntegerField Methods</h3>
+              <h3 class="subsection-title methods">IdField Methods</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#RandomIntegerField.getFieldJSON">
+                    <a class="methods-toc__entry " href="#IdField.getFieldJSON">
                       getFieldJSON ()
                     </a>
 
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="RandomIntegerField.getFieldJSON">
+                  <h4 class="method-title " id="IdField.getFieldJSON">
                     <span>getFieldJSON()</span>
                   </h4>
                   <div class="method-subtitle">

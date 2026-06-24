@@ -43,8 +43,23 @@
             </summary>
             <ul>
               <!-- menu items -->
-              <li title="DateField" id="item-DateField" class="nav-item class " onclick="goToLocation('DateField.html');">
+              <li title="DateField" id="item-DateField" class="nav-item class public" onclick="goToLocation('DateField.html');">
                 <a tabindex="1" href="javascript:void(0)">DateField</a>
+              </li>
+              <li title="RecordTypeField" id="item-RecordTypeField" class="nav-item class public" onclick="goToLocation('RecordTypeField.html');">
+                <a tabindex="1" href="javascript:void(0)">RecordTypeField</a>
+              </li>
+              <li title="TSDataGenerationConfig" id="item-TSDataGenerationConfig" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfig.html');">
+                <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfig</a>
+              </li>
+              <li title="TSDataGenerationConfigBuilder" id="item-TSDataGenerationConfigBuilder" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfigBuilder.html');">
+                <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfigBuilder</a>
+              </li>
+              <li title="TSGeneratorMode" id="item-TSGeneratorMode" class="nav-item class public" onclick="goToLocation('TSGeneratorMode.html');">
+                <a tabindex="1" href="javascript:void(0)">TSGeneratorMode</a>
+              </li>
+              <li title="TSGeneratorReturnValue" id="item-TSGeneratorReturnValue" class="nav-item class public" onclick="goToLocation('TSGeneratorReturnValue.html');">
+                <a tabindex="1" href="javascript:void(0)">TSGeneratorReturnValue</a>
               </li>
             </ul>
           </details>
@@ -54,34 +69,34 @@
             </summary>
             <ul>
               <!-- menu items -->
-              <li title="BooleanField" id="item-BooleanField" class="nav-item class " onclick="goToLocation('BooleanField.html');">
+              <li title="BooleanField" id="item-BooleanField" class="nav-item class public" onclick="goToLocation('BooleanField.html');">
                 <a tabindex="1" href="javascript:void(0)">BooleanField</a>
               </li>
-              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class " onclick="goToLocation('ControlledValueField.html');">
+              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class public" onclick="goToLocation('ControlledValueField.html');">
                 <a tabindex="1" href="javascript:void(0)">ControlledValueField</a>
               </li>
-              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class " onclick="goToLocation('CounterSuffixField.html');">
+              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class public" onclick="goToLocation('CounterSuffixField.html');">
                 <a tabindex="1" href="javascript:void(0)">CounterSuffixField</a>
               </li>
-              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class " onclick="goToLocation('DateTimeField.html');">
+              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class public" onclick="goToLocation('DateTimeField.html');">
                 <a tabindex="1" href="javascript:void(0)">DateTimeField</a>
               </li>
-              <li title="IdField" id="item-IdField" class="nav-item class " onclick="goToLocation('IdField.html');">
+              <li title="IdField" id="item-IdField" class="nav-item class public" onclick="goToLocation('IdField.html');">
                 <a tabindex="1" href="javascript:void(0)">IdField</a>
               </li>
-              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class " onclick="goToLocation('PicklistValueManager.html');">
+              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class public" onclick="goToLocation('PicklistValueManager.html');">
                 <a tabindex="1" href="javascript:void(0)">PicklistValueManager</a>
               </li>
-              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class " onclick="goToLocation('RandomIntegerField.html');">
+              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class public" onclick="goToLocation('RandomIntegerField.html');">
                 <a tabindex="1" href="javascript:void(0)">RandomIntegerField</a>
               </li>
-              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class " onclick="goToLocation('RandomPicklistValueField.html');">
+              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class public" onclick="goToLocation('RandomPicklistValueField.html');">
                 <a tabindex="1" href="javascript:void(0)">RandomPicklistValueField</a>
               </li>
-              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class " onclick="goToLocation('RelationshipField.html');">
+              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class public" onclick="goToLocation('RelationshipField.html');">
                 <a tabindex="1" href="javascript:void(0)">RelationshipField</a>
               </li>
-              <li title="TestSupport" id="item-TestSupport" class="nav-item class " onclick="goToLocation('TestSupport.html');">
+              <li title="TestSupport" id="item-TestSupport" class="nav-item class public" onclick="goToLocation('TestSupport.html');">
                 <a tabindex="1" href="javascript:void(0)">TestSupport</a>
               </li>
             </ul>
@@ -114,20 +129,20 @@
 
           <div class="section">
 
-            <h2 class="class-title top-level-type" id="RelationshipField">
-              <span>RelationshipField</span>
+            <h2 class="class-title top-level-type" id="CounterSuffixField">
+              <span>CounterSuffixField</span>
             </h2>
             <div class="class-container">
 
               <div class="class-description">
-                TestSupport.TestDataField implementation for relationship fields
+                TestSupport.TestDataField implementation for counter suffix fields. For each new record, will generate a field value that consists of a provided base value followed by an incremented integer
               </div>
               <div class="class-subtitle">
                 Signature
               </div>
-              <div class="class-annotations">@isTest</div>
+              <div class="class-annotations">@IsTest</div>
               <div class="class-signature">
-                public class RelationshipField extends TestSupport.TestDataField
+                public class CounterSuffixField extends TestSupport.TestDataField
               </div>
               <div class="class-subtitle">
                 Author
@@ -143,60 +158,58 @@
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">RelationshipField Constructors</h3>
+              <h3 class="subsection-title methods">CounterSuffixField Constructors</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#RelationshipField.RelationshipField">
-                      RelationshipField (field, parentRecordIds)
+                    <a class="methods-toc__entry " href="#CounterSuffixField.CounterSuffixField">
+                      CounterSuffixField (field, value)
                     </a>
 
                     <div class="methods-toc__description">
-                      Constructor to setup field specification for a relationship field.
+                      Constructor to set up field specification for a counter suffix field
                     </div>
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="RelationshipField.RelationshipField">
-                    <span>RelationshipField(field, parentRecordIds)</span>
+                  <h4 class="method-title " id="CounterSuffixField.CounterSuffixField">
+                    <span>CounterSuffixField(field, value)</span>
                   </h4>
                   <div class="method-description">
-                    Constructor to setup field specification for a relationship field.
+                    Constructor to set up field specification for a counter suffix field
                   </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
 
                   <div class="method-signature">
-                    public RelationshipField(Schema.SObjectField field, Set&lt;Id&gt; parentRecordIds)
+                    public CounterSuffixField(Schema.SObjectField field, Object value)
                   </div>
                   <div class="method-subtitle">Parameters</div>
                   <div class="param-name">field</div>
                   <div class="param-type">
                     Type: <code class="code-inline">Schema.SObjectField</code>
                   </div>
-                  <div class="param-description">Schema.SObjectField instance for desired relationship field</div>
-                  <div class="param-name">parentRecordIds</div>
+                  <div class="param-name">value</div>
                   <div class="param-type">
-                    Type: <code class="code-inline">Set&lt;Id&gt;</code>
+                    Type: <code class="code-inline">Object</code>
                   </div>
-                  <div class="param-description">Set of parent record IDs to iterate through when generating records including relationship field</div>
                 </div>
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">RelationshipField Methods</h3>
+              <h3 class="subsection-title methods">CounterSuffixField Methods</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#RelationshipField.getFieldJSON">
+                    <a class="methods-toc__entry " href="#CounterSuffixField.getFieldJSON">
                       getFieldJSON ()
                     </a>
 
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="RelationshipField.getFieldJSON">
+                  <h4 class="method-title " id="CounterSuffixField.getFieldJSON">
                     <span>getFieldJSON()</span>
                   </h4>
                   <div class="method-subtitle">

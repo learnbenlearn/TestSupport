@@ -43,8 +43,23 @@
             </summary>
             <ul>
               <!-- menu items -->
-              <li title="DateField" id="item-DateField" class="nav-item class " onclick="goToLocation('DateField.html');">
+              <li title="DateField" id="item-DateField" class="nav-item class public" onclick="goToLocation('DateField.html');">
                 <a tabindex="1" href="javascript:void(0)">DateField</a>
+              </li>
+              <li title="RecordTypeField" id="item-RecordTypeField" class="nav-item class public" onclick="goToLocation('RecordTypeField.html');">
+                <a tabindex="1" href="javascript:void(0)">RecordTypeField</a>
+              </li>
+              <li title="TSDataGenerationConfig" id="item-TSDataGenerationConfig" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfig.html');">
+                <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfig</a>
+              </li>
+              <li title="TSDataGenerationConfigBuilder" id="item-TSDataGenerationConfigBuilder" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfigBuilder.html');">
+                <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfigBuilder</a>
+              </li>
+              <li title="TSGeneratorMode" id="item-TSGeneratorMode" class="nav-item class public" onclick="goToLocation('TSGeneratorMode.html');">
+                <a tabindex="1" href="javascript:void(0)">TSGeneratorMode</a>
+              </li>
+              <li title="TSGeneratorReturnValue" id="item-TSGeneratorReturnValue" class="nav-item class public" onclick="goToLocation('TSGeneratorReturnValue.html');">
+                <a tabindex="1" href="javascript:void(0)">TSGeneratorReturnValue</a>
               </li>
             </ul>
           </details>
@@ -54,34 +69,34 @@
             </summary>
             <ul>
               <!-- menu items -->
-              <li title="BooleanField" id="item-BooleanField" class="nav-item class " onclick="goToLocation('BooleanField.html');">
+              <li title="BooleanField" id="item-BooleanField" class="nav-item class public" onclick="goToLocation('BooleanField.html');">
                 <a tabindex="1" href="javascript:void(0)">BooleanField</a>
               </li>
-              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class " onclick="goToLocation('ControlledValueField.html');">
+              <li title="ControlledValueField" id="item-ControlledValueField" class="nav-item class public" onclick="goToLocation('ControlledValueField.html');">
                 <a tabindex="1" href="javascript:void(0)">ControlledValueField</a>
               </li>
-              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class " onclick="goToLocation('CounterSuffixField.html');">
+              <li title="CounterSuffixField" id="item-CounterSuffixField" class="nav-item class public" onclick="goToLocation('CounterSuffixField.html');">
                 <a tabindex="1" href="javascript:void(0)">CounterSuffixField</a>
               </li>
-              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class " onclick="goToLocation('DateTimeField.html');">
+              <li title="DateTimeField" id="item-DateTimeField" class="nav-item class public" onclick="goToLocation('DateTimeField.html');">
                 <a tabindex="1" href="javascript:void(0)">DateTimeField</a>
               </li>
-              <li title="IdField" id="item-IdField" class="nav-item class " onclick="goToLocation('IdField.html');">
+              <li title="IdField" id="item-IdField" class="nav-item class public" onclick="goToLocation('IdField.html');">
                 <a tabindex="1" href="javascript:void(0)">IdField</a>
               </li>
-              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class " onclick="goToLocation('PicklistValueManager.html');">
+              <li title="PicklistValueManager" id="item-PicklistValueManager" class="nav-item class public" onclick="goToLocation('PicklistValueManager.html');">
                 <a tabindex="1" href="javascript:void(0)">PicklistValueManager</a>
               </li>
-              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class " onclick="goToLocation('RandomIntegerField.html');">
+              <li title="RandomIntegerField" id="item-RandomIntegerField" class="nav-item class public" onclick="goToLocation('RandomIntegerField.html');">
                 <a tabindex="1" href="javascript:void(0)">RandomIntegerField</a>
               </li>
-              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class " onclick="goToLocation('RandomPicklistValueField.html');">
+              <li title="RandomPicklistValueField" id="item-RandomPicklistValueField" class="nav-item class public" onclick="goToLocation('RandomPicklistValueField.html');">
                 <a tabindex="1" href="javascript:void(0)">RandomPicklistValueField</a>
               </li>
-              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class " onclick="goToLocation('RelationshipField.html');">
+              <li title="RelationshipField" id="item-RelationshipField" class="nav-item class public" onclick="goToLocation('RelationshipField.html');">
                 <a tabindex="1" href="javascript:void(0)">RelationshipField</a>
               </li>
-              <li title="TestSupport" id="item-TestSupport" class="nav-item class " onclick="goToLocation('TestSupport.html');">
+              <li title="TestSupport" id="item-TestSupport" class="nav-item class public" onclick="goToLocation('TestSupport.html');">
                 <a tabindex="1" href="javascript:void(0)">TestSupport</a>
               </li>
             </ul>
@@ -114,20 +129,20 @@
 
           <div class="section">
 
-            <h2 class="class-title top-level-type" id="PicklistValueManager">
-              <span>PicklistValueManager</span>
+            <h2 class="class-title top-level-type" id="ControlledValueField">
+              <span>ControlledValueField</span>
             </h2>
             <div class="class-container">
 
               <div class="class-description">
-                Test utility class to abstract retrieval of picklist values for sObject fields and prevent storing picklist values for the same field multiple times in memory
+                TestSupport.TestDataField implementation for controlled value fields. Mostly used for picklist fields, but can be used for any field that should have one of a set of predefined values. Iterates through set of predefined values with each generated record
               </div>
               <div class="class-subtitle">
                 Signature
               </div>
-              <div class="class-annotations">@isTest</div>
+              <div class="class-annotations">@IsTest</div>
               <div class="class-signature">
-                public class PicklistValueManager
+                public class ControlledValueField extends TestSupport.TestDataField
               </div>
               <div class="class-subtitle">
                 Author
@@ -143,69 +158,68 @@
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">PicklistValueManager Methods</h3>
+              <h3 class="subsection-title methods">ControlledValueField Constructors</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#PicklistValueManager.getFieldValues">
-                      getFieldValues (sObjectType, sObjectField)
+                    <a class="methods-toc__entry " href="#ControlledValueField.ControlledValueField">
+                      ControlledValueField (field, suppliedValues)
                     </a>
 
                     <div class="methods-toc__description">
-                      Public method to return the values for the picklist field specified by provided sObjectType and sObjectField
+                      Constructor to set up field specification for a controlled value field
                     </div>
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="PicklistValueManager.getFieldValues">
-                    <span>getFieldValues(sObjectType, sObjectField)</span>
+                  <h4 class="method-title " id="ControlledValueField.ControlledValueField">
+                    <span>ControlledValueField(field, suppliedValues)</span>
                   </h4>
                   <div class="method-description">
-                    Public method to return the values for the picklist field specified by provided sObjectType and sObjectField
+                    Constructor to set up field specification for a controlled value field
                   </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
 
                   <div class="method-signature">
-                    public static List&lt;String&gt; getFieldValues(Schema.SObjectType sObjectType, Schema.SObjectField sObjectField)
+                    public ControlledValueField(Schema.SObjectField field, List&lt;Object&gt; suppliedValues)
                   </div>
                   <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">sObjectType</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Schema.SObjectType</code>
-                  </div>
-                  <div class="param-name">sObjectField</div>
+                  <div class="param-name">field</div>
                   <div class="param-type">
                     Type: <code class="code-inline">Schema.SObjectField</code>
                   </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;String&gt;</code>
+                  <div class="param-name">suppliedValues</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">List&lt;Object&gt;</code>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">ControlledValueField Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#ControlledValueField.getFieldJSON">
+                      getFieldJSON ()
+                    </a>
 
-          <div class="section">
+                  </li>
+                </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="ControlledValueField.getFieldJSON">
+                    <span>getFieldJSON()</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
 
-            <h2 class="class-title " id="PicklistValueManager.PicklistValueManagerException">
-              <span>PicklistValueManager.PicklistValueManagerException</span>
-            </h2>
-            <div class="class-container">
-
-              <div class="class-description">
-                Custom exception
-              </div>
-              <div class="class-subtitle">
-                Signature
-              </div>
-
-              <div class="class-signature">
-                public class PicklistValueManagerException extends Exception
+                  <div class="method-signature">
+                    public override String getFieldJSON()
+                  </div>
+                </div>
               </div>
             </div>
           </div>

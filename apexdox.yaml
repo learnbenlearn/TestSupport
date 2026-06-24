@@ -1,5 +1,5 @@
 engine:
-  targetDirectory: "${workspaceFolder}/documentation"
+  targetDirectory: "${workspaceFolder}/docs"
   source:
     - path: "${workspaceFolder}/src/classes"
   homePagePath: "${workspaceFolder}/ApexDoxHomePage.html"

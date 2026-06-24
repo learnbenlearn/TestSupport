@@ -1,8 +1,5 @@
 {
     "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": true,
-    "apexPMD.rulesets": [
-        ".pmdrules.xml"
-    ],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -13,5 +10,6 @@
         ".mule": true
     },
     "xml.preferences.showSchemaDocumentationType": "none",
-    "xml.validation.enabled": false
+    "xml.validation.enabled": false,
+    "apexPMD.runOnFileSave": false
 }

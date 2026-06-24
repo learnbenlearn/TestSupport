@@ -165,7 +165,7 @@ public class TestSupport {
          * Public property to specify whether generate() calls should return only newly generated records or all records that have been generated to that point. Defaulted to
          * new in constructor
          */
-        public TSDataGenerationConfig.GeneratorReturnValue generatorReturnValue {get; set;}
+        public TSGeneratorReturnValue generatorReturnValue {get; set;}
 
         protected Map<Schema.SObjectField, TestDataField> specsByField {
             get {
