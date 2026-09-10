@@ -2,12 +2,8 @@
 private class AccountTSExampleUse {
     @IsTest
     private static void testAccountGeneration() {
-        AccountTSExample generator = new AccountTSExample(
-            TSDataGenerationConfig.builder().setMode(TSGeneratorMode.SINGLE_RECORD).setGeneratorReturnValue(
-                TSGeneratorReturnValue.NEW_RECORDS
-            ).build()
-        );
-        List<Account> generatedAccounts = (List<Account>) generator.generate();
+        AccountTSExample generator = new AccountTSExample(TSDataGenerationConfig.singleRecord().build());
+        List<Account> generatedAccounts = generator.generate();
 
         Boolean stateAndCountryPicklistsEnabled = Schema.SObjectType.Account.fields.getMap().containsKey('ShippingStateCode');
         Assert.areEqual('Test Account 0', generatedAccounts[0].Name);

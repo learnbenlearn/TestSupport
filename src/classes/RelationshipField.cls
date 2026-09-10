@@ -21,12 +21,18 @@ public class RelationshipField extends TestSupport.TestDataField {
         this.numParentRecords = parentRecordIds.size();
         this.parentRecordIds = new List<Id>(parentRecordIds);
         this.isDynamic = true;
-        this.fieldJSON = '"' + field.getDescribe().getName() + '": "{0}"';
+        String fieldJSONTemplate = '"' + field.getDescribe().getName() + '": "${parentId}"';
+        super.setFieldJSON(
+            fieldJSONTemplate,
+            fieldJSONTemplate.template(new Map<String, Object>{'parentId' => this.parentRecordIds[0]})
+        );
     }
 
     public override String getFieldJSON() {
         Integer temp = this.counter;
         this.counter += 1;
-        return this.fieldJSON.replace('{0}', this.parentRecordIds[Math.mod(temp, this.numParentRecords)]);
+        return this.fieldJSON.template(new Map<String, Object>{
+            'parentId' => this.parentRecordIds[Math.mod(temp, this.numParentRecords)]
+        });
     }
 }

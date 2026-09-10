@@ -16,13 +16,20 @@ public class IdField extends TestSupport.TestDataField {
      */
     public IdField(Schema.SObjectField field) {
         this.counter = 0;
-        
         this.field = field;
         this.isDynamic = true;
-        this.fieldJSON = '"' + field.getDescribe().getName() + '": "' + field.getDescribe().getSObjectType().getDescribe().getKeyPrefix() + '{0}"';
+        String fieldJSONTemplate = '"' + field.getDescribe().getName() + '": "' + field.getDescribe().getSObjectType().getDescribe().getKeyPrefix() + '${idSuffix}"';
+        super.setFieldJSON(
+            fieldJSONTemplate,
+            fieldJSONTemplate.template(new Map<String, Object>{
+                'idSuffix' => String.valueOf(this.counter).leftPad(ID_FIELD_PADDING_LENGTH, '0')
+            })
+        );
     }
 
     public override String getFieldJSON() {
-        return this.fieldJSON.replace('{0}', String.valueOf(this.counter++).leftPad(ID_FIELD_PADDING_LENGTH, '0'));
+        return this.fieldJSON.template(new Map<String, Object>{
+            'idSuffix' => String.valueOf(this.counter++).leftPad(ID_FIELD_PADDING_LENGTH, '0')
+        });
     }
 }

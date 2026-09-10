@@ -7,63 +7,6 @@
 @IsTest
 public class TestSupport {
     /**
-     * Helper method to generate a random integer between 0 and a provided maxValue
-     * @param maxValue
-     * @return  `Integer`
-     */
-    public static Integer getRandomInteger(Integer maxValue) {
-        return (Math.random() * maxValue).intValue();
-    }
-
-    /**
-     * Helper method to return one digit integers as two digits left-padded with a 0. Used for date/datetime formatting
-     * @param num
-     * @return  `String`
-     */
-    public static String formatTwoDigit(Integer num) {
-        String numString = String.valueOf(num);
-        return numString.length() == 1 ? '0' + numString : numString;
-    }
-
-    /**
-     * Helper method to generate test user with provided details
-     * @param alias
-     * @param email
-     * @param lastName
-     * @param profileName
-     * @param username
-     * @return  `User`
-     */
-    public static User generateTestUser(String alias, String email, String lastName, String profileName, String username) {
-        return generateTestUser(alias, email, lastName, profileName, 'America/New_York', username);
-    }
-
-    /**
-     * Overloaded helper method to generate test user with provided details including custom timeZoneSidKey
-     * @param alias
-     * @param email
-     * @param lastName
-     * @param profileName
-     * @param timeZoneSidKey
-     * @param username
-     * @return  `User`
-     */
-    public static User generateTestUser(String alias, String email, String lastName, String profileName, String timeZoneSidKey, String username) {
-        User u = new User(
-            Alias = alias,
-            Email = email,
-            EmailEncodingKey = 'UTF-8',
-            LanguageLocaleKey = 'en_US',
-            LastName = lastName,
-            LocaleSidKey = 'en_US',
-            ProfileId = [SELECT Id FROM Profile WHERE Name = :profileName].Id,
-            TimeZoneSidKey = timeZoneSidKey,
-            Username = username
-        );
-        return u;
-    }
-
-    /**
      * Virtual class to represent fields in implementations/instantiations of DataGeneration class and subclasses
      */
     public virtual class TestDataField {
@@ -72,7 +15,7 @@ public class TestSupport {
          */
         public Schema.SObjectField field {get; protected set;}
         protected Object value;
-        protected String fieldJSON;
+        protected String fieldJSON {get; private set;}
 
         /**
          * public property determining if the field has a dynamic value or predefined constant value
@@ -99,7 +42,23 @@ public class TestSupport {
         public TestDataField(Schema.SObjectField field, Object value) {
             this.field = field;
             this.value = value;
-            this.fieldJSON = '"' + field.getDescribe().getName() + '": "' + value + '"';
+            this.checkTypeCompatibility(field, value);
+            String fieldJSON = '"' + field.getDescribe().getName() + '": "' + value + '"';
+            this.setFieldJSON(fieldJSON);
+        }
+
+        protected void checkTypeCompatibility(Schema.SObjectField field, Object sampleValue) {
+            Schema.SoapType soapType = field.getDescribe().getSoapType();
+            if(!TSUtils.isTypeCompatibleValue(soapType, sampleValue)) {
+                throw new TestSupport.TSException('Value ${sampleValue} is not compatible with ${className} implementation for field ${fieldName} of type ${soapType}.'.template(
+                    new Map<String, Object>{
+                        'sampleValue' => sampleValue,
+                        'className' => this.getClassName(),
+                        'fieldName' => this.field.getDescribe().getName(),
+                        'soapType' => soapType
+                    }
+                ));
+            }
         }
 
         /**
@@ -110,6 +69,36 @@ public class TestSupport {
             return this.fieldJSON;
         }
 
+        protected void setFieldJSON(String fieldJSON) {
+            this.validateFieldJSON(fieldJSON);
+            this.fieldJSON = fieldJSON;
+        }
+
+        protected void setFieldJSON(String template, String renderedSample) {
+            this.validateFieldJSON(renderedSample);
+            this.fieldJSON = template;
+        }
+
+        private void validateFieldJSON(String renderedJSON) {
+            try {
+                JSON.deserializeUntyped('{' + renderedJSON + '}');
+            } catch(JSONException je) {
+                throw new TestSupport.TSException('${className} has invalid JSON for field ${fieldName}: ${error}'.template(new Map<String, Object>{
+                    'className' => this.getClassName(),
+                    'fieldName' => this.field.getDescribe().getName(),
+                    'error' => je.getMessage()
+                }));
+            }
+        }
+
+        /**
+         * Returns the concrete runtime class name of the instantiating subclass, for use in exception messages
+         * @return  `String`
+         */
+        protected String getClassName() {
+            return String.valueOf(this).substringBefore(':');
+        }
+
         /**
          * Virtual method to change the value of the field represented by an instantiation of this class. Not implemented in parent
          * class, but made available for subclasses if they can change the field value without needing any further information about
@@ -118,7 +107,10 @@ public class TestSupport {
          * @exception
          */
         public virtual Object changeFieldValue() {
-            throw new TSException('Not implemented.');
+            throw new TestSupport.TSException('${className} must override changeFieldValue() for ${fieldName}.'.template(new Map<String, Object>{
+                'className' => this.getClassName(),
+                'fieldName' => this.field.getDescribe().getName()
+            }));
         }
 
         /**
@@ -129,7 +121,10 @@ public class TestSupport {
          * @exception
          */
         public virtual Object changeFieldValue(Object currentFieldValue) {
-            throw new TSException('Not implemented.');
+            throw new TestSupport.TSException('${className} must override changeFieldValue() for ${fieldName}.'.template(new Map<String, Object>{
+                'className' => this.getClassName(),
+                'fieldName' => this.field.getDescribe().getName()
+            }));
         }
     }
 
@@ -245,9 +240,7 @@ public class TestSupport {
         }
 
         protected DataGeneration(TSDataGenerationConfig config, List<TestDataField> fieldSpecs) {
-            for(TestDataField fieldSpec : fieldSpecs) {
-                this.specsByField.put(fieldSpec.field, fieldSpec);
-            }
+            this.specsByField = TSUtils.toSpecsByField(fieldSpecs);
 
             this.S_OBJECT_TYPE = this.getSObjectType();
             this.describeSObjectResult = Schema.describeSObjects(new List<String>{this.S_OBJECT_TYPE}, SObjectDescribeOptions.DEFERRED)[0];
@@ -287,9 +280,7 @@ public class TestSupport {
          * @return  `DataGeneration`
          */
         public DataGeneration setFieldSpecs(List<TestDataField> fieldSpecs) {
-            for(TestDataField fieldSpec : fieldSpecs) {
-                this.specsByField.put(fieldSpec.field, fieldSpec);
-            }
+            this.specsByField.putAll(TSUtils.toSpecsByField(fieldSpecs));
             return this;
         }
 
@@ -398,7 +389,14 @@ public class TestSupport {
             } else if(this.defaultSpecsByField.containsKey(fieldToChange)) {
                 fieldSpec = this.defaultSpecsByField.get(fieldToChange);
             } else {
-                throw new TSException('No specification for this field.' + (this.useFieldDefaults ? ' There is no default specification for this field.' : ''));
+                throw new TSException(this.useFieldDefaults ?
+                    'No specification or default for field ${objectName}.${fieldName}.'.template(
+                        new Map<String, Object>{'objectName' => this.S_OBJECT_TYPE, 'fieldName' => fieldName}
+                        ) :
+                    'No specification for field ${objectName}.${fieldName}.'.template(
+                        new Map<String, Object>{'objectName' => this.S_OBJECT_TYPE, 'fieldName' => fieldName}
+                    )
+                );
             }
             for(sObject record : this.modifiedRecords) {
                 record.put(fieldName, fieldSpec.changeFieldValue(record.get(fieldName)));
@@ -414,6 +412,14 @@ public class TestSupport {
          * @return  `DataGeneration`
          */
         public DataGeneration changeField(Schema.SObjectField fieldToChange, Object newValue) {
+            Schema.SoapType soapType = fieldToChange.getDescribe().getSoapType();
+            if(!TSUtils.isTypeCompatibleValue(soapType, newValue)) {
+                throw new TSException('Value ${newValue} is not compatible with field ${fieldName} of type ${soapType}.'.template(new Map<String, Object>{
+                    'newValue' => newValue,
+                    'fieldName' => fieldToChange.getDescribe().getName(),
+                    'soapType' => soapType
+                }));
+            }
             String fieldName = fieldToChange.getDescribe().getName();
             for(sObject record : this.modifiedRecords) {
                 record.put(fieldName, newValue);

@@ -14,7 +14,6 @@ public class TSDataGenerationConfig {
     public final Boolean useFieldDefaultsWasSet {get; set;}
     public final Integer numberToGenerate {get; set;}
     public final Boolean numberToGenerateWasSet {get; set;}
-    public final TSGeneratorMode generatorMode {get; set;}
     public final TSGeneratorReturnValue generatorReturnValue {get; set;}
     public final Boolean generatorReturnValueWasSet {get; set;}
 
@@ -27,7 +26,6 @@ public class TSDataGenerationConfig {
         this.generateMasterRecordsWasSet = builder.generateMasterRecordsWasSet;
         this.generateRecordIDs = builder.getGenerateRecordIDs();
         this.generateRecordIDsWasSet = builder.generateRecordIDsWasSet;
-        this.generatorMode = builder.getGeneratorMode();
         this.generatorReturnValue = builder.getGeneratorReturnValue();
         this.generatorReturnValueWasSet = builder.generatorReturnValueWasSet;
         this.numberToGenerate = builder.getNumberToGenerate();
@@ -42,5 +40,37 @@ public class TSDataGenerationConfig {
      */
     public static TSDataGenerationConfigBuilder builder() {
         return new TSDataGenerationConfigBuilder();
+    }
+
+    /**
+     * Shorthand method to get new builder instance with numberToGenerate set to 1
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public static TSDataGenerationConfigBuilder singleRecord() {
+        return TSDataGenerationConfig.builder().setNumberToGenerate(1);
+    }
+
+    /**
+     * Shorthand method to get new builder instance with numberToGenerate set to 200
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public static TSDataGenerationConfigBuilder bulkRecords() {
+        return TSDataGenerationConfig.builder().setNumberToGenerate(200);
+    }
+
+    /**
+     * Shorthand method to get new builder instance with generateRecordIDs set to false
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public static TSDataGenerationConfigBuilder noRecordIDs() {
+        return TSDataGenerationConfig.builder().setGenerateRecordIDs(false);
+    }
+
+    /**
+     * Shorthand method to get new builder instance with generatorReturnValue set to `TSGeneratorReturnValue.ALL_RECORDS`
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public static TSDataGenerationConfigBuilder allRecords() {
+        return TSDataGenerationConfig.builder().allRecords();
     }
 }

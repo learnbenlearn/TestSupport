@@ -20,10 +20,16 @@ public class RandomIntegerField extends TestSupport.TestDataField {
         this.isDynamic = true;
         this.min = min;
         this.max = max;
-        this.fieldJSON = '"' + field.getDescribe().getName() + '": {0}';
+        String fieldJSONTemplate = '"' + field.getDescribe().getName() + '": ${randomInteger}';
+        super.setFieldJSON(
+            fieldJSONTemplate,
+            fieldJSONTemplate.template(new Map<String, Object>{'randomInteger' => TSUtils.getRandomInteger(this.min, this.max)})
+        );
     }
 
     public override String getFieldJSON() {
-        return this.fieldJSON.replace('{0}', String.valueOf(Integer.valueOf(Math.floor(Math.random() * (this.max - this.min) + this.min))));
+        return this.fieldJSON.template(new Map<String, Object>{
+            'randomInteger' => String.valueOf(TSUtils.getRandomInteger(this.min, this.max))
+        });
     }
 }

@@ -16,14 +16,16 @@ public class CounterSuffixField extends TestSupport.TestDataField {
      */
     public CounterSuffixField(Schema.SObjectField field, Object value) {
         this.counter = 0;
-
         this.field = field;
         this.value = value;
         this.isDynamic = true;
-        this.fieldJSON = '"' + this.field.getDescribe().getName() + '": "' + this.value + '{0}"';
+        String fieldJSONTemplate = '"' + this.field.getDescribe().getName() + '": "' + this.value + ' ${counter}"';
+        String renderedSample = fieldJSONTemplate.template(new Map<String, Object>{'counter' => this.counter});
+        super.checkTypeCompatibility(field, this.value + ' ' + this.counter);
+        super.setFieldJSON(fieldJSONTemplate, renderedSample);
     }
 
     public override String getFieldJSON() {
-        return this.fieldJSON.replace('{0}', String.valueOf(this.counter++));
+        return this.fieldJSON.template(new Map<String, Object>{'counter' => this.counter++});
     }
 }

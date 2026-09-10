@@ -49,9 +49,6 @@
               <li title="TSDataGenerationConfigBuilder" id="item-TSDataGenerationConfigBuilder" class="nav-item class public" onclick="goToLocation('TSDataGenerationConfigBuilder.html');">
                 <a tabindex="1" href="javascript:void(0)">TSDataGenerationConfigBuilder</a>
               </li>
-              <li title="TSGeneratorMode" id="item-TSGeneratorMode" class="nav-item class public" onclick="goToLocation('TSGeneratorMode.html');">
-                <a tabindex="1" href="javascript:void(0)">TSGeneratorMode</a>
-              </li>
               <li title="TSGeneratorReturnValue" id="item-TSGeneratorReturnValue" class="nav-item class public" onclick="goToLocation('TSGeneratorReturnValue.html');">
                 <a tabindex="1" href="javascript:void(0)">TSGeneratorReturnValue</a>
               </li>
@@ -195,6 +192,15 @@
 
                     <div class="methods-toc__description">
                       Overloaded helper method to generate test user with provided details including custom timeZoneSidKey
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#TestSupport.toSpecsByField">
+                      toSpecsByField (fieldSpecs)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Utility method to generate <code class="code-inline">Map&lt;Schema.SObjectField, TestDataField&gt;</code> from <code class="code-inline">List&lt;TestDataField&gt;</code>
                     </div>
                   </li>
                 </ul>
@@ -350,6 +356,35 @@
                     <code class="code-inline">User</code>
                   </div>
                 </div>
+                <div class="method public">
+                  <h4 class="method-title " id="TestSupport.toSpecsByField">
+
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L71">
+                      toSpecsByField(fieldSpecs)
+                    </a>
+                  </h4>
+                  <div class="method-description">
+                    Utility method to generate <code class="code-inline">Map&lt;Schema.SObjectField, TestDataField&gt;</code> from <code class="code-inline">List&lt;TestDataField&gt;</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public static Map&lt;Schema.SObjectField, TestDataField&gt; toSpecsByField(List&lt;TestDataField&gt; fieldSpecs)
+                  </div>
+                  <div class="method-subtitle">Parameters</div>
+                  <div class="param-name">fieldSpecs</div>
+                  <div class="param-type">
+                    Type: <code class="code-inline">List&lt;TestDataField&gt;</code>
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">Map&lt;Schema.SObjectField, TestDataField&gt;</code>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -358,7 +393,7 @@
 
             <h2 class="class-title " id="TestSupport.TestDataField">
 
-              <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L69">
+              <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L82">
                 TestSupport.TestDataField
               </a>
             </h2>
@@ -387,7 +422,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L73">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L86">
                       field
                     </a></td>
                   <td>
@@ -403,7 +438,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L74">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L87">
                       value
                     </a></td>
                   <td>
@@ -419,7 +454,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L75">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L88">
                       fieldJSON
                     </a></td>
                   <td>
@@ -435,7 +470,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L80">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L93">
                       isDynamic
                     </a></td>
                   <td>
@@ -451,7 +486,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L87">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L100">
                       set
                     </a></td>
                   <td>
@@ -490,7 +525,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.TestDataField.TestDataField">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L92">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L105">
                       TestDataField()
                     </a>
                   </h4>
@@ -505,7 +540,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.TestDataField.TestDataField_1">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L99">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L112">
                       TestDataField(field, value)
                     </a>
                   </h4>
@@ -566,7 +601,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.TestDataField.getFieldJSON">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L109">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L122">
                       getFieldJSON()
                     </a>
                   </h4>
@@ -590,7 +625,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.TestDataField.changeFieldValue">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L120">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L133">
                       changeFieldValue()
                     </a>
                   </h4>
@@ -614,7 +649,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.TestDataField.changeFieldValue_1">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L131">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L144">
                       changeFieldValue(currentFieldValue)
                     </a>
                   </h4>
@@ -648,7 +683,7 @@
 
             <h2 class="class-title " id="TestSupport.DataGeneration">
 
-              <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L139">
+              <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L152">
                 TestSupport.DataGeneration
               </a>
             </h2>
@@ -677,7 +712,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L140">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L153">
                       S_OBJECT_TYPE
                     </a></td>
                   <td>
@@ -693,7 +728,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L146">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L159">
                       generateMasterRecords
                     </a></td>
                   <td>
@@ -709,7 +744,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L152">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L165">
                       generateRecordIDs
                     </a></td>
                   <td>
@@ -725,7 +760,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L157">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L170">
                       useFieldDefaults
                     </a></td>
                   <td>
@@ -741,7 +776,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L162">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L175">
                       numberToGenerate
                     </a></td>
                   <td>
@@ -757,7 +792,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L168">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L181">
                       generatorReturnValue
                     </a></td>
                   <td>
@@ -773,7 +808,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L170">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L183">
                       specsByField
                     </a></td>
                   <td>
@@ -789,7 +824,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L180">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L193">
                       defaultSpecsByField
                     </a></td>
                   <td>
@@ -805,7 +840,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L193">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L206">
                       idField
                     </a></td>
                   <td>
@@ -821,7 +856,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L203">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L216">
                       idFieldSpec
                     </a></td>
                   <td>
@@ -837,7 +872,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L216">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L229">
                       records
                     </a></td>
                   <td>
@@ -853,7 +888,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L223">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L236">
                       set
                     </a></td>
                   <td>
@@ -869,7 +904,7 @@
                 </tr>
                 <tr class="property public">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L229">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L242">
                       modifiedRecords
                     </a></td>
                   <td>
@@ -885,7 +920,7 @@
                 </tr>
                 <tr class="property protected">
                   <td class="attribute-name">
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L236">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L249">
                       set
                     </a></td>
                   <td>
@@ -927,7 +962,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.DataGeneration.DataGeneration">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L239">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L252">
                       DataGeneration()
                     </a>
                   </h4>
@@ -942,7 +977,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.DataGeneration.DataGeneration_1">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L243">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L256">
                       DataGeneration(config)
                     </a>
                   </h4>
@@ -957,7 +992,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.DataGeneration.DataGeneration_2">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L247">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L260">
                       DataGeneration(config, fieldSpecs)
                     </a>
                   </h4>
@@ -1069,7 +1104,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.DataGeneration.getSObjectType">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L262">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L273">
                       getSObjectType()
                     </a>
                   </h4>
@@ -1084,7 +1119,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.DataGeneration.loadDefaultSpecsByField">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L264">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L275">
                       loadDefaultSpecsByField()
                     </a>
                   </h4>
@@ -1099,7 +1134,7 @@
                 <div class="method protected">
                   <h4 class="method-title " id="TestSupport.DataGeneration.loadMasterDetailFields">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L268">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L279">
                       loadMasterDetailFields()
                     </a>
                   </h4>
@@ -1114,7 +1149,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.setFieldSpec">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L278">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L289">
                       setFieldSpec(fieldSpec)
                     </a>
                   </h4>
@@ -1143,7 +1178,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.setFieldSpecs">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L289">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L300">
                       setFieldSpecs(fieldSpecs)
                     </a>
                   </h4>
@@ -1172,7 +1207,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.overwriteFieldSpecs">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L302">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L311">
                       overwriteFieldSpecs(fieldSpecs)
                     </a>
                   </h4>
@@ -1201,7 +1236,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.generate">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L311">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L320">
                       generate()
                     </a>
                   </h4>
@@ -1225,7 +1260,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.resetRecordChanges">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L367">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L376">
                       resetRecordChanges()
                     </a>
                   </h4>
@@ -1249,7 +1284,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.clearField">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L377">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L386">
                       clearField(fieldToClear)
                     </a>
                   </h4>
@@ -1278,7 +1313,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.changeField">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L392">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L401">
                       changeField(fieldToChange)
                     </a>
                   </h4>
@@ -1313,7 +1348,7 @@
                 <div class="method public">
                   <h4 class="method-title " id="TestSupport.DataGeneration.changeField_1">
 
-                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L416">
+                    <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L425">
                       changeField(fieldToChange, newValue)
                     </a>
                   </h4>
@@ -1351,7 +1386,7 @@
 
             <h2 class="class-title " id="TestSupport.TSException">
 
-              <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L428">
+              <a target="_blank" rel="noopener noreferrer" title="Go to source" class="source-link" href="https://github.com/learnbenlearn/TestSupport/tree/main/src/classes/TestSupport.cls#L437">
                 TestSupport.TSException
               </a>
             </h2>

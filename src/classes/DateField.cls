@@ -13,14 +13,12 @@ public class DateField extends TestSupport.TestDataField {
      */
     public DateField(Schema.SObjectField field, Date dateValue) {
         this.field = field;
-        this.fieldJSON = String.format(
-            '"{0}": "{1}-{2}-{3}"',
-            new List<Object>{
-                field.getDescribe().getName(),
-                dateValue.year(),
-                TestSupport.formatTwoDigit(dateValue.month()),
-                TestSupport.formatTwoDigit(dateValue.day())
-            }
-        );
+        String fieldJSON = '"${fieldName}": "${year}-${month}-${day}"'.template(new Map<String, Object>{
+            'fieldName' => field.getDescribe().getName(),
+            'year' => dateValue.year(),
+            'month' => TSUtils.formatTwoDigit(dateValue.month()),
+            'day' => TSUtils.formatTwoDigit(dateValue.day())
+        });
+        super.setFieldJSON(fieldJSON);
     }
 }

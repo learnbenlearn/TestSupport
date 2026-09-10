@@ -22,12 +22,19 @@ public class ControlledValueField extends TestSupport.TestDataField {
         this.numSuppliedValues = suppliedValues.size();
         this.suppliedValues = suppliedValues;
         this.isDynamic = true;
-        this.fieldJSON = '"' + field.getDescribe().getName() + '": "{0}"';
+        String fieldJSONTemplate = '"' + field.getDescribe().getName() + '": "${controlledValue}"';
+        super.checkTypeCompatibility(field, this.suppliedValues[0]);
+        super.setFieldJSON(
+            fieldJSONTemplate,
+            fieldJSONTemplate.template(new Map<String, Object>{'controlledValue' => this.suppliedValues[0]})
+        );
     }
 
     public override String getFieldJSON() {
         Integer temp = this.counter;
         this.counter += 1;
-        return this.fieldJSON.replace('{0}', String.valueOf(this.suppliedValues[Math.mod(temp, this.numSuppliedValues)]));
+        return this.fieldJSON.template(new Map<String, Object>{
+            'controlledValue' => this.suppliedValues[Math.mod(temp, this.numSuppliedValues)]}
+        );
     }
 }

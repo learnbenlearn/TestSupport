@@ -25,12 +25,16 @@ public class BooleanField extends TestSupport.TestDataField {
         this.currentBoolValue = initialBoolValue;
         this.field = field;
         this.isDynamic = true;
-        this.fieldJSON = '"' + field.getDescribe().getName() + '": {0}';
+        String fieldJSONTemplate = '"' + field.getDescribe().getName() + '": ${booleanValue}';
+        super.setFieldJSON(
+            fieldJSONTemplate,
+            fieldJSONTemplate.template(new Map<String, Object>{'booleanValue' => this.currentBoolValue})
+        );
     }
 
     public override String getFieldJSON() {
         Boolean temp = this.currentBoolValue;
         this.currentBoolValue = !this.currentBoolValue;
-        return this.fieldJSON.replace('{0}', String.valueOf(temp));
+        return this.fieldJSON.template(new Map<String, Object>{'booleanValue' => temp});
     }
 }

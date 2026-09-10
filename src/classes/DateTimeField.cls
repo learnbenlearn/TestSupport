@@ -13,17 +13,15 @@ public class DateTimeField extends TestSupport.TestDataField {
      */
     public DateTimeField(Schema.SObjectField field, DateTime dt) {
         this.field = field;
-        this.fieldJSON = String.format(
-            '"{0}": "{1}-{2}-{3}T-{4}:{5}:{6}Z"',
-            new List<Object>{
-                field.getDescribe().getName(),
-                dt.year(),
-                TestSupport.formatTwoDigit(dt.month()),
-                TestSupport.formatTwoDigit(dt.day()),
-                TestSupport.formatTwoDigit(dt.hour()),
-                TestSupport.formatTwoDigit(dt.minute()),
-                TestSupport.formatTwoDigit(dt.second())
-            }
-        );
+        String fieldJSON = '"${fieldName}": "${year}-${month}-${day}T-${hour}:${minute}:${second}Z"'.template(new Map<String, Object>{
+            'fieldName' => field.getDescribe().getName(),
+            'year' => dt.year(),
+            'month' => TSUtils.formatTwoDigit(dt.month()),
+            'day' => TSUtils.formatTwoDigit(dt.day()),
+            'hour' => TSUtils.formatTwoDigit(dt.hour()),
+            'minute' => TSUtils.formatTwoDigit(dt.minute()),
+            'second' => TSUtils.formatTwoDigit(dt.second())
+        });
+        super.setFieldJSON(fieldJSON);
     }
 }

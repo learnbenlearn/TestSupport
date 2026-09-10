@@ -3,8 +3,8 @@
     {
       "path": "src",
       "package": "TestSupport",
-      "versionName": "Bresso",
-      "versionNumber": "2.0.0.NEXT",
+      "versionName": "Pescara",
+      "versionNumber": "3.0.3.NEXT",
       "versionDescription": "Package containing Apex classes for generation of test/mock data.",
       "default": true
     },
@@ -39,6 +39,11 @@
     "TestSupport@2.0.0-3": "04tg7000000D6afAAC",
     "TestSupport@2.0.0-4": "04tg7000000D6cHAAS",
     "TestSupport@2.0.0-5": "04tg7000000DFCXAA4",
-    "TestSupport@2.0.0-6": "04tg7000000DKaPAAW"
+    "TestSupport@2.0.0-6": "04tg7000000DKaPAAW",
+    "TestSupport@3.0.0-1": "04tg7000000O0lFAAS",
+    "TestSupport@3.0.0-2": "04tg7000000O1MLAA0",
+    "TestSupport@3.0.1-1": "04tg7000000O1sbAAC",
+    "TestSupport@3.0.2-1": "04tg7000000O7zdAAC",
+    "TestSupport@3.0.3-1": "04tg7000000O8dxAAC"
   }
 }

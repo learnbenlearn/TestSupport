@@ -25,7 +25,10 @@ public class RecordTypeField extends TestSupport.TestDataField {
             throw new IllegalArgumentException('No record type found with ' + recordTypeName + ' as name or developer name.');
         }
         this.field = field;
-        this.fieldJSON = String.format('"{0}": "{1}"', new List<Object>{field.getDescribe().getName(), recordTypeId});
+        String fieldJSON = '"${fieldName}": "${recordTypeId}"'.template(
+            new Map<String, Object>{'fieldName' => field.getDescribe().getName(), 'recordTypeId' => recordTypeId}
+        );
+        super.setFieldJSON(fieldJSON);
     }
 
     /**
@@ -35,6 +38,9 @@ public class RecordTypeField extends TestSupport.TestDataField {
      */
     public RecordTypeField(Schema.SObjectField field, Id recordTypeId) {
         this.field = field;
-        this.fieldJSON = String.format('"{0}": "{1}"', new List<Object>{field.getDescribe().getName(), recordTypeId});
+        String fieldJSON = '"${fieldName}": "${recordTypeId}"'.template(
+            new Map<String, Object>{'fieldName' => field.getDescribe().getName(), 'recordTypeId' => recordTypeId}
+        );
+        super.setFieldJSON(fieldJSON);
     }
 }

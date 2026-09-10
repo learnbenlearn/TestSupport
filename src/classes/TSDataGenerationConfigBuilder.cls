@@ -2,7 +2,6 @@
  * Fluent builder for `TSDataGenerationConfig`. If not overridden, the following defaults will be used
  * `generateMasterRecords` => `false`
  * `generateRecordIDs` => `true`
- * `generatorMode` => `null`
  * `generatorReturnValue` => `TSGeneratorReturnValue.NEW_RECORDS`
  * `numberToGenerate` => `200`
  * `useFieldDefaults` => `true`
@@ -12,13 +11,8 @@
  */
 @IsTest
 public class TSDataGenerationConfigBuilder {
-    private static final Map<TSGeneratorMode, Integer> NUMBER_TO_GENERATE_BY_MODE = new Map<TSGeneratorMode, Integer>{
-        TSGeneratorMode.SINGLE_RECORD => 1,
-        TSGeneratorMode.BULK_RECORDS => 200
-    };
     private Boolean generateMasterRecords = false;
     private Boolean generateRecordIDs = true;
-    private TSGeneratorMode generatorMode;
     private TSGeneratorReturnValue generatorReturnValue = TSGeneratorReturnValue.NEW_RECORDS;
     private Integer numberToGenerate = 200;
     private Boolean useFieldDefaults = true;
@@ -103,17 +97,6 @@ public class TSDataGenerationConfigBuilder {
     }
 
     /**
-     * fluent setter for generatorMode
-     * @param generatorMode
-     * @return  `TSDataGenerationConfigBuilder`
-     */
-    public TSDataGenerationConfigBuilder setMode(TSGeneratorMode generatorMode) {
-        this.generatorMode = generatorMode;
-        this.numberToGenerate = NUMBER_TO_GENERATE_BY_MODE.get(generatorMode);
-        return this;
-    }
-
-    /**
      * fluent setter for numberToGenerate
      * @param numberToGenerate
      * @return  `TSDataGenerationConfigBuilder`
@@ -144,6 +127,38 @@ public class TSDataGenerationConfigBuilder {
     }
 
     /**
+     * Shorthand fluent method to set numberToGenerate to 1
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public TSDataGenerationConfigBuilder singleRecord() {
+        return this.setNumberToGenerate(1);
+    }
+
+    /**
+     * Shorthand fluent method to set numberToGenerate to 200
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public TSDataGenerationConfigBuilder bulkRecords() {
+        return this.setNumberToGenerate(200);
+    }
+
+    /**
+     * Shorthand fluent method to set generateRecordIDs to false
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public TSDataGenerationConfigBuilder noRecordIDs() {
+        return this.setGenerateRecordIDs(false);
+    }
+
+    /**
+     * Shorthand fluent method to set generatorReturnValue to `TSGeneratorReturnValue.ALL_RECORDS`
+     * @return  `TSDataGenerationConfigBuilder`
+     */
+    public TSDataGenerationConfigBuilder allRecords() {
+        return this.setGeneratorReturnValue(TSGeneratorReturnValue.ALL_RECORDS);
+    }
+
+    /**
      * getter for generateMasterRecords
      * @return  `Boolean`
      */
@@ -157,14 +172,6 @@ public class TSDataGenerationConfigBuilder {
      */
     public Boolean getGenerateRecordIDs() {
         return this.generateRecordIDs;
-    }
-
-    /**
-     * getter for generatorMode
-     * @return  `TSGeneratorMode`
-     */
-    public TSGeneratorMode getGeneratorMode() {
-        return this.generatorMode;
     }
 
     /**
