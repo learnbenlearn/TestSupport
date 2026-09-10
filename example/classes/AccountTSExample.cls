@@ -17,8 +17,8 @@ public class AccountTSExample extends TestSupport.DataGeneration {
     protected override Map<Schema.SObjectField, TestSupport.TestDataField> loadDefaultSpecsByField() {
         Boolean stateAndCountryPicklistsEnabled = Schema.SObjectType.Account.fields.getMap().containsKey('ShippingStateCode');
 
-        Map<Schema.SObjectField, TestSupport.TestDataField> defaultSpecsByField = TestSupport.toSpecsByField(new List<TestSupport.TestDataField>{
-            new CounterSuffixField(Account.Name, 'Test Account '),
+        Map<Schema.SObjectField, TestSupport.TestDataField> defaultSpecsByField = TSUtils.toSpecsByField(new List<TestSupport.TestDataField>{
+            new CounterSuffixField(Account.Name, 'Test Account'),
             new TestSupport.TestDataField(Account.Phone, '223 4567890'),
             new TestSupport.TestDataField(Account.ShippingStreet, '1 Beaver Stadium'),
             new TestSupport.TestDataField(Account.ShippingCity, 'University Park'),
