@@ -4,7 +4,7 @@
       "path": "src",
       "package": "TestSupport",
       "versionName": "Pescara",
-      "versionNumber": "3.0.3.NEXT",
+      "versionNumber": "3.0.4.NEXT",
       "versionDescription": "Package containing Apex classes for generation of test/mock data.",
       "default": true
     },
@@ -44,6 +44,7 @@
     "TestSupport@3.0.0-2": "04tg7000000O1MLAA0",
     "TestSupport@3.0.1-1": "04tg7000000O1sbAAC",
     "TestSupport@3.0.2-1": "04tg7000000O7zdAAC",
-    "TestSupport@3.0.3-1": "04tg7000000O8dxAAC"
+    "TestSupport@3.0.3-1": "04tg7000000O8dxAAC",
+    "TestSupport@3.0.4-1": "04tg7000000O9i5AAC"
   }
 }
