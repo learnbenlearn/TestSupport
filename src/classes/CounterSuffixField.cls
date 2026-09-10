@@ -21,7 +21,7 @@ public class CounterSuffixField extends TestSupport.TestDataField {
         this.isDynamic = true;
         String fieldJSONTemplate = '"' + this.field.getDescribe().getName() + '": "' + this.value + '${counter}"';
         String renderedSample = fieldJSONTemplate.template(new Map<String, Object>{'counter' => this.counter});
-        super.checkTypeCompatibility(field, this.value + ' ' + this.counter);
+        super.checkTypeCompatibility(field, this.value + '' + this.counter);
         super.setFieldJSON(fieldJSONTemplate, renderedSample);
     }
 
