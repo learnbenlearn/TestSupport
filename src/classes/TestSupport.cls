@@ -274,6 +274,18 @@ public class TestSupport {
         }
 
         /**
+         * Public method to set a field specification after instantiation of DataGeneration subclass. If a specification already exists for the provided field, this method will
+         * overwrite that existing specification. All other existing field specifications will be preserved.
+         * @param field
+         * @param value
+         * @return  `DataGeneration`
+         */
+        public DataGeneration setFieldSpec(Schema.SObjectField field, Object value) {
+            this.specsByField.put(field, new TestDataField(field, value));
+            return this;
+        }
+
+        /**
          * Public method to set multiple field specifications after instantiation of DataGeneration subclass. Any specifications that already exist for provided fields will
          * be overridden by this method. All other existing field specifications will be preserved.
          * @param fieldSpecs

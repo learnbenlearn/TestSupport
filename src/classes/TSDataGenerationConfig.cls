@@ -47,7 +47,7 @@ public class TSDataGenerationConfig {
      * @return  `TSDataGenerationConfigBuilder`
      */
     public static TSDataGenerationConfigBuilder singleRecord() {
-        return TSDataGenerationConfig.builder().setNumberToGenerate(1);
+        return builder().setNumberToGenerate(1);
     }
 
     /**
@@ -55,7 +55,7 @@ public class TSDataGenerationConfig {
      * @return  `TSDataGenerationConfigBuilder`
      */
     public static TSDataGenerationConfigBuilder bulkRecords() {
-        return TSDataGenerationConfig.builder().setNumberToGenerate(200);
+        return builder().setNumberToGenerate(200);
     }
 
     /**
@@ -63,7 +63,7 @@ public class TSDataGenerationConfig {
      * @return  `TSDataGenerationConfigBuilder`
      */
     public static TSDataGenerationConfigBuilder noRecordIDs() {
-        return TSDataGenerationConfig.builder().setGenerateRecordIDs(false);
+        return builder().setGenerateRecordIDs(false);
     }
 
     /**
@@ -71,6 +71,6 @@ public class TSDataGenerationConfig {
      * @return  `TSDataGenerationConfigBuilder`
      */
     public static TSDataGenerationConfigBuilder allRecords() {
-        return TSDataGenerationConfig.builder().allRecords();
+        return builder().allRecords();
     }
 }
