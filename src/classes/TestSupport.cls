@@ -289,6 +289,17 @@ public class TestSupport {
          * Public method to set a relationship field specification after instantiation of DataGeneration subclass. If a specification already exists for the provided field, this method will
          * overwrite that existing specification. All other existing field specifications will be preserved.
          * @param field
+         * @param parentRecord
+         * @return  `DataGeneration`
+         */
+        public DataGeneration setRelationshipField(Schema.SObjectField field, sObject parentRecord) {
+            return this.setRelationshipField(field, new List<sObject>{parentRecord});
+        }
+
+        /**
+         * Public method to set a relationship field specification after instantiation of DataGeneration subclass. If a specification already exists for the provided field, this method will
+         * overwrite that existing specification. All other existing field specifications will be preserved.
+         * @param field
          * @param parentRecords
          * @return  `DataGeneration`
          */
