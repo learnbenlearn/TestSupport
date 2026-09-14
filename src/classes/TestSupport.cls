@@ -50,7 +50,7 @@ public class TestSupport {
         protected void checkTypeCompatibility(Schema.SObjectField field, Object sampleValue) {
             Schema.SoapType soapType = field.getDescribe().getSoapType();
             if(!TSUtils.isTypeCompatibleValue(soapType, sampleValue)) {
-                throw new TestSupport.TSException('Value ${sampleValue} is not compatible with ${className} implementation for field ${fieldName} of type ${soapType}.'.template(
+                throw new TSException('Value ${sampleValue} is not compatible with ${className} implementation for field ${fieldName} of type ${soapType}.'.template(
                     new Map<String, Object>{
                         'sampleValue' => sampleValue,
                         'className' => this.getClassName(),
@@ -83,7 +83,7 @@ public class TestSupport {
             try {
                 JSON.deserializeUntyped('{' + renderedJSON + '}');
             } catch(JSONException je) {
-                throw new TestSupport.TSException('${className} has invalid JSON for field ${fieldName}: ${error}'.template(new Map<String, Object>{
+                throw new TSException('${className} has invalid JSON for field ${fieldName}: ${error}'.template(new Map<String, Object>{
                     'className' => this.getClassName(),
                     'fieldName' => this.field.getDescribe().getName(),
                     'error' => je.getMessage()
@@ -107,7 +107,7 @@ public class TestSupport {
          * @exception
          */
         public virtual Object changeFieldValue() {
-            throw new TestSupport.TSException('${className} must override changeFieldValue() for ${fieldName}.'.template(new Map<String, Object>{
+            throw new TSException('${className} must override changeFieldValue() for ${fieldName}.'.template(new Map<String, Object>{
                 'className' => this.getClassName(),
                 'fieldName' => this.field.getDescribe().getName()
             }));
@@ -121,7 +121,7 @@ public class TestSupport {
          * @exception
          */
         public virtual Object changeFieldValue(Object currentFieldValue) {
-            throw new TestSupport.TSException('${className} must override changeFieldValue() for ${fieldName}.'.template(new Map<String, Object>{
+            throw new TSException('${className} must override changeFieldValue() for ${fieldName}.'.template(new Map<String, Object>{
                 'className' => this.getClassName(),
                 'fieldName' => this.field.getDescribe().getName()
             }));
@@ -255,11 +255,11 @@ public class TestSupport {
         protected abstract String getSObjectType();
 
         protected virtual Map<Schema.SObjectField, TestDataField> loadDefaultSpecsByField() {
-            throw new TestSupport.TSException('Default field specs are not defined for this class.');
+            throw new TSException('Default field specs are not defined for this class.');
         }
 
         protected virtual Map<Schema.SObjectField, RelationshipField> loadMasterDetailFields() {
-            throw new TestSupport.TSException('Master Detail field specs are not defined for this class.');
+            throw new TSException('Master Detail field specs are not defined for this class.');
         }
 
         /**
@@ -293,8 +293,17 @@ public class TestSupport {
          * @return  `DataGeneration`
          */
         public DataGeneration setRelationshipField(Schema.SObjectField field, List<sObject> parentRecords) {
-            this.specsByField.put(field, new RelationshipField(field, (new Map<Id, sObject>(parentRecords)).keySet()));
-            return this;
+            try {
+                this.specsByField.put(field, new RelationshipField(field, (new Map<Id, sObject>(parentRecords)).keySet()));
+                return this;
+            } catch(ListException le) {
+                throw new TSException('Error creating parent ID set for RelationshipField for field ${fieldName}: ${error}'.template(
+                    new Map<String, Object>{
+                        'fieldName' => field.getDescribe().getName(),
+                        'error' => le.getMessage()
+                    }
+                ));
+            }
         }
 
         /**
