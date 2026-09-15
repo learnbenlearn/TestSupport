@@ -21,13 +21,18 @@ public class RelationshipField extends TestSupport.TestDataField {
         this.numParentRecords = parentRecordIds.size();
         this.parentRecordIds = new List<Id>(parentRecordIds);
         this.isDynamic = parentRecordIds.size() > 1;
-        if(!field.getDescribe().getReferenceTo().contains(this.parentRecordIds[0].getSObjectType())) {
-            throw new TSException('Parent record ID is not compatible with ${className} implementation for field ${fieldName}.'.template(
-                new Map<String, Object>{
-                    'className' => this.getClassName(),
-                    'fieldName' => this.field.getDescribe().getName()
-                }
-            ));
+
+        List<Schema.SObjectType> parentFields = field.getDescribe().getReferenceTo();
+        for(Id parentRecordId : this.parentRecordIds) {
+            if(!parentFields.contains(parentRecordId.getSObjectType())) {
+                throw new TSException('Parent record ID ${parentId} is not compatible with ${className} implementation for field ${fieldName}.'.template(
+                    new Map<String, Object>{
+                        'parentId' => parentRecordId,
+                        'className' => this.getClassName(),
+                        'fieldName' => this.field.getDescribe().getName()
+                    }
+                ));
+            }
         }
 
         String fieldJSONTemplate = '"' + field.getDescribe().getName() + '": "${parentId}"';

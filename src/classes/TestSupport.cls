@@ -285,6 +285,10 @@ public class TestSupport {
             return this;
         }
 
+        public DataGeneration setRelationshipField(Schema.SObjectField field, Set<Id> parentRecordIds) {
+            this.specsByField.put(field, new RelationshipField(field, parentRecordIds));
+            return this;
+        }
         /**
          * Public method to set a relationship field specification after instantiation of DataGeneration subclass. If a specification already exists for the provided field, this method will
          * overwrite that existing specification. All other existing field specifications will be preserved.
